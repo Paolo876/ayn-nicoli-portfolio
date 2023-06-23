@@ -1,0 +1,13 @@
+.landing {
+    background-color: var(--light-color);
+    height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.landing-logo {
+    font-size: 5em;
+    color: var(--dark-color);
+}
