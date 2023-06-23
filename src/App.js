@@ -24,7 +24,10 @@ function App() {
   return (
     <div className="App">
       <Modal open={showModal}>
-        <Box>
+        <Box sx={{
+          height: "100vh",
+          width: "100vw",
+        }}>
           <Landing/>
         </Box>
       </Modal>
