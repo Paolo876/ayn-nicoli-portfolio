@@ -6,6 +6,7 @@ export const theme = createTheme({
       styleOverrides: {
         body: {
           background: '#f4f1eb',
+          color: "#333"
         //   background     : `radial-gradient(circle, rgba(27,26,26,1) 0%, rgba(24,23,23,1) 180%)`,
         },
       },

@@ -5,13 +5,13 @@ import { Typography, AppBar, Container, Box, Link, IconButton } from '@mui/mater
 import MenuIcon from '@mui/icons-material/Menu';
 
 const linkStyles = {
-  fontSize: { md: 15, lg: 16, },
+  fontSize: { md: 15, lg: 15, },
   fontWeight: 500,
   letterSpacing: .5,
   borderBottom: "2px solid transparent",
   lineHeight: 1.8,
   opacity: .7,
-  transition: "all 500ms ease 25ms",
+  transition: "all 500ms ease 200ms",
   "&:hover": {
     borderColor: "primary.light",
     opacity: 1,
@@ -21,12 +21,12 @@ const Appbar = () => {
   return (
     <AppBar component="nav" position="fixed" sx={{minHeight: 0, background: "none", boxShadow: 0}}>
       <Container maxWidth="xl">
-        <Box sx={{display: "flex", flexDirection: "row", px:{xs:0, sm: .5, md:1.5, lg: 1.5, xl: 3 }, py:{xs:.5, sm:1.15, md: 1.75, xl: 2 }, alignItems: "center"}}>
+        <Box sx={{display: "flex", flexDirection: "row", px:{xs:0, sm: .5, md:1.5, lg: 1.5, xl: 3 }, py:{xs:.5, sm:1.15, md: 1.75, lg: 2.5 }, alignItems: "center"}}>
           <Link component={ReactLink} to="/" >
-            <Typography variant="body1" sx={{letterSpacing: .75}} fontWeight={700} fontSize={{lg: 23}} lineHeight={1}>AYN NICOLI LAQUINDANUM</Typography>
+            <Typography variant="body1" sx={{letterSpacing: .75}} fontWeight={700} fontSize={{lg: 23}} lineHeight={1} color="text.primary">AYN NICOLI LAQUINDANUM</Typography>
             <Box sx={{display: "flex", alignItems: "center", mx: "auto", width: "100%", justifyContent: "center", mt: .25}} >
               <Typography variant="body1" lineHeight={1} letterSpacing={.2} fontWeight={300} fontSize={13}>LICENSED ARCHITECT</Typography>
-              <Typography variant="body1" color="primary.light" mx={1} fontSize={16} lineHeight={1} fontWeight={400}>|</Typography>
+              <Typography variant="body1" color="primary.dark" mx={1} fontSize={16} lineHeight={1} fontWeight={400}>|</Typography>
               <Typography variant="body1" lineHeight={1} letterSpacing={.2} fontWeight={300} fontSize={13}>GRAPHIC ARTIST</Typography>
             </Box>
           </Link>
