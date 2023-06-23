@@ -20,7 +20,8 @@ export default function Landing({ showModal }) {
             alignItems: "center",
             justifyContent: "center",
             background: "#333",
-            textShadow: "2px 2px 10px rgba(0, 0, 0, 0.15)"
+            textShadow: "2px 2px 10px rgba(0, 0, 0, 0.15)",
+            pb: 20,
           }}
         >
           <Fade appear={true} in={showModal} timeout={{ enter: 1500, exit: 1200 }} style={{ transitionDelay: "250ms" }}>
