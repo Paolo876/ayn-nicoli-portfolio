@@ -18,7 +18,7 @@ function App() {
   const [ showModal, setShowModal ] = useState(true)
 
   window.onload = () => {
-    setTimeout(() => setShowModal(false), 2500)
+    setTimeout(() => setShowModal(false), 4000)
   }
 
   return (
