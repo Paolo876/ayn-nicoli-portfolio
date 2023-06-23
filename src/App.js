@@ -11,26 +11,19 @@ import Contact from './pages/Contact/Contact';
 import Home from './pages/Home/Home';
 import Projects from './pages/Projects/Projects';
 import './App.css';
-import { Modal, Box, Fade  } from '@mui/material';
 import Landing from './pages/Home/Landing';
 
 function App() {
   const { user, authIsReady } = useAuthContext();
   const [ showModal, setShowModal ] = useState(true)
+
   window.onload = () => {
     setTimeout(() => setShowModal(false), 2500)
   }
 
   return (
     <div className="App">
-      <Modal open={showModal}>
-        <Box sx={{
-          height: "100vh",
-          width: "100vw",
-        }}>
-          <Landing/>
-        </Box>
-      </Modal>
+      <Landing showModal={showModal} setShowModal={setShowModal}/>
       <BrowserRouter>
         {user && authIsReady && <DevNavbar/>}
         <Routes>
