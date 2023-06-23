@@ -23,11 +23,11 @@ const Appbar = () => {
       <Container maxWidth="xl">
         <Box sx={{display: "flex", flexDirection: "row", px:{xs:0, sm: .5, md:1.5, lg: 1.5, xl: 3 }, py:{xs:.5, sm:1.15, md: 1.75, lg: 2.5 }, alignItems: "center"}}>
           <Link component={ReactLink} to="/" >
-            <Typography variant="body1" sx={{letterSpacing: .75}} fontWeight={700} fontSize={{lg: 23}} lineHeight={1} color="text.primary">AYN NICOLI LAQUINDANUM</Typography>
+            <Typography variant="body1" sx={{letterSpacing: .75}} fontWeight={700} fontSize={{lg: 23}} lineHeight={1} color="primary.dark">AYN NICOLI LAQUINDANUM</Typography>
             <Box sx={{display: "flex", alignItems: "center", mx: "auto", width: "100%", justifyContent: "center", mt: .25}} >
-              <Typography variant="body1" lineHeight={1} letterSpacing={.2} fontWeight={300} fontSize={13}>LICENSED ARCHITECT</Typography>
+              <Typography variant="body1" lineHeight={1} letterSpacing={.2} fontWeight={300} fontSize={13} color="primary.main">LICENSED ARCHITECT</Typography>
               <Typography variant="body1" color="primary.dark" mx={1} fontSize={16} lineHeight={1} fontWeight={400}>|</Typography>
-              <Typography variant="body1" lineHeight={1} letterSpacing={.2} fontWeight={300} fontSize={13}>GRAPHIC ARTIST</Typography>
+              <Typography variant="body1" lineHeight={1} letterSpacing={.2} fontWeight={300} fontSize={13} color="primary.main">GRAPHIC ARTIST</Typography>
             </Box>
           </Link>
           <Box 
