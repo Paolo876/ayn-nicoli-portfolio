@@ -1,19 +1,16 @@
-import { useState, useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import "./Landing.css";
 // import Aos from "aos";
 import "aos/dist/aos.css";
-import { Box, Fade, Typography, Modal, Grow, Slide } from '@mui/material';
+import { Box, Fade, Typography, Modal } from '@mui/material';
 
-export default function Landing({ showModal, setShowModal}) {
-//   useEffect(() => {
-//     Aos.init();
-// }, []);
-const containerRef = useRef(null);
+export default function Landing({ showModal }) {
+
 
 
   return (
     <Modal open={showModal} closeAfterTransition>
-      <Fade in={showModal}>
+      <Fade in={showModal} timeout={{ exit: 800}}>
         <Box 
           sx={{
             height: "100vh",
@@ -31,11 +28,11 @@ const containerRef = useRef(null);
           </Fade>
           <Box sx={{display: "flex", alignItems: "center", mt: .75}}>
             <Fade appear={true} in={showModal} timeout={{ enter: 900, exit: 900 }} style={{ transitionDelay: "800ms" }}>
-              <Typography variant="body1" color="background.default" lineHeight={1} letterSpacing={.75} sx={{opacity: .65}} fontWeight={200} mt={.5} container={containerRef.current}>LICENSED ARCHITECT</Typography>
+              <Typography variant="body1" color="background.default" lineHeight={1} letterSpacing={.75} sx={{opacity: .65}} fontWeight={200} mt={.5}>LICENSED ARCHITECT</Typography>
             </Fade>
             <Typography variant="body1" color="primary.light" mx={1} fontSize={16} lineHeight={1} fontWeight={400}>|</Typography>
             <Fade appear={true} in={showModal} timeout={{ enter: 900, exit: 900 }} style={{ transitionDelay: "1200ms" }}>
-              <Typography variant="body1" color="background.default" lineHeight={1} letterSpacing={.75} sx={{opacity: .65}} fontWeight={200} mt={.5} container={containerRef.current}>GRAPHIC ARTIST</Typography>
+              <Typography variant="body1" color="background.default" lineHeight={1} letterSpacing={.75} sx={{opacity: .65}} fontWeight={200} mt={.5}>GRAPHIC ARTIST</Typography>
             </Fade>
           </Box>
         </Box>
