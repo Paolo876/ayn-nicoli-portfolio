@@ -12,6 +12,7 @@ import Home from './pages/Home/Home';
 import Projects from './pages/Projects/Projects';
 import './App.css';
 import Landing from './pages/Home/Landing';
+import Appbar from './components/UI/Appbar';
 
 function App() {
   const { user, authIsReady } = useAuthContext();
@@ -23,8 +24,11 @@ function App() {
 
   return (
     <div className="App">
-      <Landing showModal={showModal} setShowModal={setShowModal}/>
       <BrowserRouter>
+      <Landing showModal={showModal} setShowModal={setShowModal}/>
+
+        <Appbar/>
+
         {user && authIsReady && <DevNavbar/>}
         <Routes>
           <Route path="/" element={!showModal && <Home/>} />

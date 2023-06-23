@@ -18,7 +18,7 @@ export default function ShowcaseCategories() {
     
   return (
     <div className='showcase-categories' id='showcase-page'>
-        <Navbar content="home"/>
+        {/* <Navbar content="home"/> */}
         <div className='showcase-categories-list'>
             <ul className='main-category-list'>
                 <li className={`${category === "architecture" ? 'active' : ''}`}  onClick={() => handleClick("architecture")}>

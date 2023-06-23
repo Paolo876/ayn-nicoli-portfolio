@@ -7,7 +7,6 @@ export default function Home() {
 
   return (
     <div className='home' id="home">
-        {/* <Landing/> */}
         <ShowcaseCategories/>
         <footer className="footer">
           <p>© 2022 Ayn Laquindanum, All Rights Reserved.</p>
