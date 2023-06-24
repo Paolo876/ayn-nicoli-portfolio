@@ -42,7 +42,7 @@ const Appbar = ({ isArchProjActive, setIsArchProjActive }) => {
     <AppBar component="nav" position="fixed" sx={{minHeight: 0, backgroundColor: "background.default", boxShadow: 5}}>
       <Container maxWidth="xl" sx={{position: "relative"}}>
         <Grid container sx={{py:{xs:.5, sm:1.15, md: 1.2, lg: .75 }, minHeight: 60}}>
-          <Grid item xs={4} sx={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
+          <Grid item xs={4} sx={{display: "flex", justifyContent: "space-between", alignItems: "center", px: .5}}>
             <Button 
               onClick={() => setIsArchProjActive(true)}
               sx={{...projectButtonStyles, transform: isArchProjActive ? "scale(1.05)" : "none", opacity: !isArchProjActive ? 1: .85}}

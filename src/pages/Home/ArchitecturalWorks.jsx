@@ -17,8 +17,8 @@ const ArchitecturalWorks = () => {
               <Typography variant="body1" letterSpacing={4.5} fontWeight={100} sx={{opacity: .7}} lineHeight={1.6} fontSize={23} color="background.default">PRINT & LOGO DESIGNS</Typography>
             </Box>
           </Grid>
-          <Grid item xs={8} sx={{zIndex: 2}}>
-
+          <Grid item xs={8} sx={{zIndex: 2, display: "flex", flexDirection: "column", height: "100%", overflow: "auto"}}>
+          
           </Grid>
         </Grid>
       </Container>
