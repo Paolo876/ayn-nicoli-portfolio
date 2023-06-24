@@ -26,7 +26,7 @@ function App() {
       <BrowserRouter>
       <Landing showModal={showModal} setShowModal={setShowModal}/>
 
-        <Appbar/>
+        {/* <Appbar/> */}
 
         {user && authIsReady && <DevNavbar/>}
         <Routes>

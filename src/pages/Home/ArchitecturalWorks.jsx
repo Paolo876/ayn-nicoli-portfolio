@@ -13,8 +13,8 @@ const ArchitecturalWorks = () => {
             </Box>
             <Box align="left" sx={{mt: 5}}>
               <Typography variant="body1" letterSpacing={4.5} fontWeight={100} sx={{opacity: .7}} lineHeight={1.6} fontSize={23} color="background.default">3D MODELING</Typography>
-              <Typography variant="body1" letterSpacing={4.5} fontWeight={100} sx={{opacity: .7}} lineHeight={1.6} fontSize={23} color="background.default">INTERIOR VISUALIZATION</Typography>
-              <Typography variant="body1" letterSpacing={4.5} fontWeight={100} sx={{opacity: .7}} lineHeight={1.6} fontSize={23} color="background.default">EXTERIOR VISUALIZATION</Typography>
+              <Typography variant="body1" letterSpacing={4.5} fontWeight={100} sx={{opacity: .7}} lineHeight={1.6} fontSize={23} color="background.default">INTERIOR VISUALIZATIONS</Typography>
+              <Typography variant="body1" letterSpacing={4.5} fontWeight={100} sx={{opacity: .7}} lineHeight={1.6} fontSize={23} color="background.default">PRINT & LOGO DESIGNS</Typography>
             </Box>
           </Grid>
           <Grid item xs={8} sx={{zIndex: 2}}>

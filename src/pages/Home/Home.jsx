@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import ShowcaseCategories from './ShowcaseCategories';
 import ArchitecturalWorks from "./ArchitecturalWorks";
@@ -7,13 +8,17 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import Appbar from "../../components/UI/Appbar";
+import GraphicWorks from "./GraphicWorks";
 
 
 export default function Home() {
-
+  const [ isArchProjActive, setIsArchProjActive ] = useState("architectural")
   return (
     <Box sx={{display: "flex", flexDirection:"column", alignItems: "space-between", height: "100vh"}}>
-      <ArchitecturalWorks/>
+      <Appbar isArchProjActive={isArchProjActive} setIsArchProjActive={setIsArchProjActive}/>
+      {isArchProjActive ? <ArchitecturalWorks/> : <GraphicWorks/>}
+      
     </Box>
     // <Box sx={{pt: 12, display: "flex", flexDirection:"column", alignItems: "space-between", height: "100vh"}}>
     //   <Box>
