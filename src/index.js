@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import { AuthContextProvider } from "./context/AuthContext";
-import { createRoot } from 'react-dom/client';
 import { theme } from "./materialTheme";
 import { ThemeProvider } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
