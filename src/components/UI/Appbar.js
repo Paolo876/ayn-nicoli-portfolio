@@ -19,15 +19,15 @@ const linkStyles = {
 }
 const Appbar = () => {
   return (
-    <AppBar component="nav" position="fixed" sx={{minHeight: 0, background: "none", boxShadow: 0}}>
+    <AppBar component="nav" position="fixed" sx={{minHeight: 0, backgroundColor: "background.default", boxShadow: 5}}>
       <Container maxWidth="xl">
-        <Box sx={{display: "flex", flexDirection: "row", px:{xs:0, sm: .5, md:1.5, lg: 1.5, xl: 3 }, py:{xs:.5, sm:1.15, md: 1.75, lg: 2.5 }, alignItems: "center"}}>
+        <Box sx={{display: "flex", flexDirection: "row", px:{xs:0, sm: .5, md:1.5, lg: 1.5, xl: 3 }, py:{xs:.5, sm:1.15, md: 1.2, lg: 1.25 }, alignItems: "center"}}>
           <Link component={ReactLink} to="/" >
-            <Typography variant="body1" sx={{letterSpacing: .75}} fontWeight={700} fontSize={{lg: 23}} lineHeight={1} color="primary.dark">AYN NICOLI LAQUINDANUM</Typography>
+            <Typography variant="body1" sx={{letterSpacing: -.5}} fontWeight={700} fontSize={{lg: 23}} lineHeight={1} color="primary.dark">AYN NICOLI LAQUINDANUM</Typography>
             <Box sx={{display: "flex", alignItems: "center", mx: "auto", width: "100%", justifyContent: "center", mt: .25}} >
-              <Typography variant="body1" lineHeight={1} letterSpacing={.2} fontWeight={300} fontSize={13} color="primary.main">LICENSED ARCHITECT</Typography>
+              <Typography variant="body1" lineHeight={1} letterSpacing={.25} fontWeight={300} fontSize={12} color="primary.dark">LICENSED ARCHITECT</Typography>
               <Typography variant="body1" color="primary.dark" mx={1} fontSize={16} lineHeight={1} fontWeight={400}>|</Typography>
-              <Typography variant="body1" lineHeight={1} letterSpacing={.2} fontWeight={300} fontSize={13} color="primary.main">GRAPHIC ARTIST</Typography>
+              <Typography variant="body1" lineHeight={1} letterSpacing={.25} fontWeight={300} fontSize={12} color="primary.dark">GRAPHIC ARTIST</Typography>
             </Box>
           </Link>
           <Box 
@@ -39,7 +39,7 @@ const Appbar = () => {
               alignItems: "flex-end",
             }}
             >
-            <Link component={NavLink} to="/projects" draggable={false}><Typography color="primary.dark" sx={linkStyles}>PROJECTS</Typography></Link>
+            <Link component={NavLink} to="/about" draggable={false}><Typography color="primary.dark" sx={linkStyles}>ABOUT</Typography></Link>
             <Link component={NavLink} to="/contact" draggable={false}><Typography color="primary.dark" sx={linkStyles}>CONTACT</Typography></Link>
           </Box>
         </Box>
