@@ -10,13 +10,14 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Appbar from "../../components/UI/Appbar";
 import GraphicWorks from "./GraphicWorks";
-import { useCollection } from "../../hooks/useCollection";
+import { useAuthContext } from "../../hooks/useAuthContext";
+// import { useCollection } from "../../hooks/useCollection";
 
 export default function Home() {
   const [ isArchProjActive, setIsArchProjActive ] = useState("architectural")
-  const { documents } = useCollection("projects")
-
-  console.log(documents)
+  // const { documents } = useCollection("projects")
+  const { architecturalProjects } = useAuthContext();
+  console.log(architecturalProjects)
   return (
     <Box sx={{display: "flex", flexDirection:"column", alignItems: "space-between", height: "100vh"}}>
       <Appbar isArchProjActive={isArchProjActive} setIsArchProjActive={setIsArchProjActive}/>
