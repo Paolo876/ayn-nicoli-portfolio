@@ -23,7 +23,7 @@ const linkStyles = {
 const projectLinkStyles = {
   fontWeight: 700,
   lineHeight: 1.1,
-  fontSize: 21,
+  fontSize: 17,
   letterSpacing: -.5,
 
 }
@@ -41,8 +41,8 @@ const Appbar = ({ isArchProjActive, setIsArchProjActive }) => {
   return (
     <AppBar component="nav" position="fixed" sx={{minHeight: 0, backgroundColor: "background.default", boxShadow: 2}}>
       <Container maxWidth="xl" sx={{position: "relative"}}>
-        <Grid container sx={{py:{xs:.5, sm:1.15, md: 1.2, lg: .75 }, minHeight: 60}}>
-          <Grid item xs={4} sx={{display: "flex", justifyContent: "space-between", alignItems: "center", px: .5}}>
+        <Grid container sx={{py:{xs:.5, sm:1.15, md: 1.2, lg: .75 }, minHeight: 65}}>
+          <Grid item xs={3.2} sx={{display: "flex", justifyContent: "space-between", alignItems: "center", px: .5}}>
             <Button 
               onClick={() => setIsArchProjActive(true)}
               sx={{...projectButtonStyles, transform: isArchProjActive ? "scale(1.05)" : "none", opacity: !isArchProjActive ? 1: .85}}
@@ -54,7 +54,7 @@ const Appbar = ({ isArchProjActive, setIsArchProjActive }) => {
               >
                 ARCHITECTURAL <Box component="span" fontWeight={400}>DESIGN</Box>
               </Typography>
-              {isArchProjActive && <Box sx={{height: 2, width: "75%", position: "absolute", bottom: 2, backgroundColor: "primary.light", transition: "all 500ms ease"}}></Box>}
+              {isArchProjActive && <Box sx={{height: 2, width: "75%", position: "absolute", bottom: 1, backgroundColor: "primary.light", transition: "all 500ms ease"}}></Box>}
             </Button>
 
             <Box sx={{height: 6, width: 6, borderRadius: "50%", backgroundColor: "text.disabled"}}></Box>
@@ -70,7 +70,7 @@ const Appbar = ({ isArchProjActive, setIsArchProjActive }) => {
               >
                 GRAPHIC <Box component="span" fontWeight={400}>DESIGN</Box>
               </Typography>
-              {!isArchProjActive && <Box sx={{height: 2, width: "75%", position: "absolute", bottom: 2, backgroundColor: "secondary.light", transition: "all 500ms ease"}}></Box>}
+              {!isArchProjActive && <Box sx={{height: 2, width: "75%", position: "absolute", bottom: 1, backgroundColor: "secondary.light", transition: "all 500ms ease"}}></Box>}
             </Button>  
           </Grid>
           <Grid 
