@@ -65,7 +65,7 @@ const GraphicWorks = ({ setShowModal }) => {
                 </Box>
               </Grid>
             </Slide>
-            <Fade appear={true} in={true} timeout={{ enter: 1200, exit: 800 }} style={{ transitionDelay: "2600ms" }}>
+            <Fade appear={activeProjects !== null} in={activeProjects !== null} timeout={{ enter: 1200, exit: 800 }} style={{ transitionDelay: "2600ms" }}>
               <Grid item xs={8.8} sx={{zIndex: 2, display: "flex", flexDirection: "column", height: "100%", overflow: "auto", width: "100%"}}>
                 {activeProjects && <Showcase projects={activeProjects.projects} setShowModal={setShowModal}/>}
               </Grid>

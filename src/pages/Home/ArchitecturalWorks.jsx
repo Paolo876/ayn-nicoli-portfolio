@@ -31,7 +31,7 @@ const ArchitecturalWorks = ({ setShowModal }) => {
                   <ButtonBase 
                     onClick={() => handleClick("all")}
                     align="left" 
-                    sx={{display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "left"}}
+                    sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "left"}}
                   >
                     <Typography variant="h2" lineHeight={1.1} fontWeight={700} sx={{opacity: .95}} fontSize={{lg: 42}} color="background.default" ml={.25}>ARCHITECTURAL</Typography>
                     <Typography variant="h3" fontWeight={200} lineHeight={1.1} sx={{opacity: .8}} fontSize={{lg: 42}} letterSpacing={1} color="background.paper">DESIGN</Typography>
@@ -51,7 +51,7 @@ const ArchitecturalWorks = ({ setShowModal }) => {
                 </Box>
               </Grid>
             </Slide>
-            <Fade appear={activeProjects} in={activeProjects} timeout={{ enter: 1200, exit: 800 }} style={{ transitionDelay: "2000ms" }} unmountOnExit mountOnEnter>
+            <Fade appear={activeProjects !== null} in={activeProjects !== null} timeout={{ enter: 1200, exit: 800 }} style={{ transitionDelay: "2000ms" }} unmountOnExit mountOnEnter>
               <Grid item xs={8.8} sx={{zIndex: 2, display: "flex", flexDirection: "column", height: "100%", overflow: "auto", width: "100%"}}>
                 {activeProjects && <Showcase projects={activeProjects.projects} setShowModal={setShowModal}/>}
               </Grid>
