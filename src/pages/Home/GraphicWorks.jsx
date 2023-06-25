@@ -4,9 +4,9 @@ const GraphicWorks = () => {
   return (
     <Box sx={{position: "relative", height: "100%", backgroundColor: "background.paper"}}>
       {/* <Box sx={{position: "absolute", top: 0, left: 0, height: "100%", backgroundColor: "secondary.dark", width: "35vw", zIndex: 1}}></Box> */}
-      <Container maxWidth="xl" sx={{pt: 0, height: "100%", pb: 10}}>
+      <Container maxWidth="xl" sx={{pt: 0, height: "100%"}}>
         <Grid container sx={{height: "100%"}}>
-          <Grid item xs={4} sx={{zIndex: 2, backgroundColor: "secondary.main", display: "flex", flexDirection: "column", height: "100%", justifyContent: "center", p: 2, pb: 10}}>
+        <Grid item xs={4} sx={{zIndex: 2, backgroundColor: "secondary.main", display: "flex", flexDirection: "column", justifyContent: "center", p: 2, mb: 10}}>
             <Box align="left" sx={{}}>
               <Typography variant="h2" lineHeight={1.1} fontWeight={700} sx={{opacity: .95}} fontSize={{lg: 56}} color="background.default" ml={.35}>GRAPHIC</Typography>
               <Typography variant="h3" fontWeight={200} lineHeight={1.1} sx={{opacity: .8}} letterSpacing={1} color="background.paper">DESIGN</Typography>

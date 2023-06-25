@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Box, Container, Grid, Typography } from "@mui/material";
-import ShowcaseCategories from './ShowcaseCategories';
 import ArchitecturalWorks from "./ArchitecturalWorks";
+import GraphicWorks from "./GraphicWorks";
+
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -9,19 +10,13 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Appbar from "../../components/UI/Appbar";
-import GraphicWorks from "./GraphicWorks";
-import { useAuthContext } from "../../hooks/useAuthContext";
-// import { useCollection } from "../../hooks/useCollection";
 
 export default function Home() {
   const [ isArchProjActive, setIsArchProjActive ] = useState("architectural")
-  // const { documents } = useCollection("projects")
-  const { architecturalProjects } = useAuthContext();
-  console.log(architecturalProjects)
   return (
     <Box sx={{display: "flex", flexDirection:"column", alignItems: "space-between", height: "100vh"}}>
       <Appbar isArchProjActive={isArchProjActive} setIsArchProjActive={setIsArchProjActive}/>
-      {isArchProjActive ? <ArchitecturalWorks /> : <GraphicWorks/>}
+      {isArchProjActive ? <ArchitecturalWorks/> : <GraphicWorks/>}
       
     </Box>
     // <Box sx={{pt: 12, display: "flex", flexDirection:"column", alignItems: "space-between", height: "100vh"}}>
