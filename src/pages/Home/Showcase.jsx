@@ -14,16 +14,16 @@ const chunkArray = (arr, chunkSize) => {
 const Showcase = ({ projects }) => {
 
   return (
-    <Box sx={{pt: 8, height: "100%", width: "100%", pl: 1,}}>
+    <Box sx={{pt: 10, height: "100%", width: "100%", px: .5,}}>
       <Carousel
         autoPlay={false}
         sx={{mb:2}}
         indicators={false}
         navButtonsAlwaysInvisible={false}
       >
-        <Grid container sx={{display: "flex", justifyContent:"center", alignItems: 'center'}} rowSpacing={5} columnSpacing={0} align="center" py={2} pb={8} mb={2}>
+        <Grid container sx={{display: "flex", justifyContent:"center", alignItems: 'center'}} rowSpacing={9} columnSpacing={0} align="center" py={2} pb={8} mb={2}>
           {projects.map(item => <Grid item xs={4} key={item}>
-            <ButtonBase sx={{}}><Image src={item} width={320} height={300} fit="cover" duration={800}/></ButtonBase>
+            <ButtonBase sx={{}}><Image src={item} width={330} height={300} fit="cover" duration={800}/></ButtonBase>
           </Grid>)}
         </Grid>
       </Carousel>

@@ -9,11 +9,18 @@ const ArchitecturalWorks = () => {
   const [ activeProjects, setActiveProjects ] = useState(null);
 
   useEffect(() => {
-    if(architecturalProjects) setActiveProjects([...architecturalProjects.interior, ...architecturalProjects.exterior ])
+    if(architecturalProjects) setActiveProjects({id: "all", projects : [...architecturalProjects.interior, ...architecturalProjects.exterior ]})
   }, [architecturalProjects])
   
-  console.log(activeProjects)
-  if(activeProjects) return (
+  const handleClick = (id) => {
+    setActiveProjects(null)
+    if(id === "all") setTimeout(() => setActiveProjects({id: "all", projects : [...architecturalProjects.interior, ...architecturalProjects.exterior ]}), 50)
+    if(id === "interior") setTimeout(() => setActiveProjects({id: "interior", projects : architecturalProjects.interior}), 50)
+    if(id === "exterior") setTimeout(() => setActiveProjects({id: "exterior", projects : architecturalProjects.exterior}), 50)
+  }
+
+
+  return (
     <Fade appear={true} in={true} timeout={{ enter: 1000, exit: 800 }} style={{ transitionDelay: "200ms" }}>
       <Box sx={{position: "relative", height: "100%", backgroundColor: "background.default"}}>
         <Container maxWidth="xl" sx={{pt: 0, height: "100%"}}>
@@ -22,7 +29,7 @@ const ArchitecturalWorks = () => {
               <Grid item xs={3.2} sx={{zIndex: 2, backgroundColor: "primary.main", display: "flex", flexDirection: "column", justifyContent: "center", p: 2, mb: 5, pb: 20, boxShadow: 2}}>
                 <Fade appear={true} in={true} timeout={{ enter: 800, exit: 800 }} style={{ transitionDelay: "700ms" }}>
                   <ButtonBase 
-                    onClick={() => setActiveProjects([...architecturalProjects.interior, ...architecturalProjects.exterior ])}
+                    onClick={() => handleClick("all")}
                     align="left" 
                     sx={{display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "left"}}
                   >
@@ -32,21 +39,21 @@ const ArchitecturalWorks = () => {
                 </Fade>
                 <Box align="left" sx={{mt: 5, display: "flex", flexDirection: "column", textAlign:"left", alignItems: "flex-start"}}>
                   <Fade appear={true} in={true} timeout={{ enter: 800, exit: 800 }} style={{ transitionDelay: "1200ms" }}>
-                    <ButtonBase onClick={() => setActiveProjects(architecturalProjects.interior)}>
+                    <ButtonBase onClick={() => handleClick("interior")}>
                       <Typography variant="body1" letterSpacing={3} fontWeight={100} sx={{opacity: .7}} lineHeight={1.8} fontSize={18} color="background.default">INTERIOR VISUALIZATIONS</Typography>
                     </ButtonBase>
                   </Fade>
                   <Fade appear={true} in={true} timeout={{ enter: 800, exit: 800 }} style={{ transitionDelay: "1500ms" }}>
-                    <ButtonBase>
+                    <ButtonBase onClick={() => handleClick("exterior")}>
                       <Typography variant="body1" letterSpacing={3} fontWeight={100} sx={{opacity: .7}} lineHeight={1.8} fontSize={18} color="background.default">EXTERIOR VISUALIZATIONS</Typography>
                     </ButtonBase>                
                   </Fade>
                 </Box>
               </Grid>
             </Slide>
-            <Fade appear={true} in={true} timeout={{ enter: 800, exit: 800 }} style={{ transitionDelay: "2000ms" }}>
+            <Fade appear={activeProjects} in={activeProjects} timeout={{ enter: 800, exit: 800 }} style={{ transitionDelay: "2000ms" }} unmountOnExit mountOnEnter>
               <Grid item xs={8.8} sx={{zIndex: 2, display: "flex", flexDirection: "column", height: "100%", overflow: "auto", width: "100%"}}>
-                <Showcase projects={activeProjects}/>
+                {activeProjects && <Showcase projects={activeProjects.projects}/>}
               </Grid>
             </Fade>
           </Grid>
