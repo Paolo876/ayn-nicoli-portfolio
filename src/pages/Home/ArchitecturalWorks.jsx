@@ -1,5 +1,6 @@
 import React from 'react'
-import { Box, Container, Grid, Typography } from '@mui/material'
+import { Box, Container, Grid, Typography } from '@mui/material';
+
 const ArchitecturalWorks = () => {
   return (
     <Box sx={{position: "relative", height: "100%", backgroundColor: "background.paper"}}>
@@ -18,7 +19,7 @@ const ArchitecturalWorks = () => {
             </Box>
           </Grid>
           <Grid item xs={8} sx={{zIndex: 2, display: "flex", flexDirection: "column", height: "100%", overflow: "auto"}}>
-          
+
           </Grid>
         </Grid>
       </Container>

@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <Box sx={{display: "flex", flexDirection:"column", alignItems: "space-between", height: "100vh"}}>
       <Appbar isArchProjActive={isArchProjActive} setIsArchProjActive={setIsArchProjActive}/>
-      {isArchProjActive ? <ArchitecturalWorks/> : <GraphicWorks/>}
+      {isArchProjActive ? <ArchitecturalWorks /> : <GraphicWorks/>}
       
     </Box>
     // <Box sx={{pt: 12, display: "flex", flexDirection:"column", alignItems: "space-between", height: "100vh"}}>

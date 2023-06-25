@@ -17,11 +17,7 @@ export const authReducer = (state, action) => {
       const architecturalProjects = action.payload.find(item => item.id === "architectural")
       const graphicProjects = action.payload.find(item => item.id === "graphic");
 
-      return { 
-        ...state, 
-        architecturalProjects, 
-        graphicProjects
-      }
+      return { ...state, architecturalProjects, graphicProjects }
     default:
       return state
   }
@@ -51,12 +47,8 @@ export const AuthContextProvider = ({ children }) => {
 
   //get projects
   useEffect(() => {
-    if(documents) dispatch({ type: 'SET_PROJECTS', payload: documents })
-    // if(documents) console.log(...documents.filter(item => item.id === "architectural"))
-    
+    if(documents) dispatch({ type: 'SET_PROJECTS', payload: documents })    
   }, [documents])
-
-  // console.log('AuthContext state:', state)
   
   return (
     <AuthContext.Provider value={{ ...state, dispatch }}>

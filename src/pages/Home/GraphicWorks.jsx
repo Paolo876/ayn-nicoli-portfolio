@@ -12,9 +12,10 @@ const GraphicWorks = () => {
               <Typography variant="h3" fontWeight={200} lineHeight={1.1} sx={{opacity: .8}} letterSpacing={1} color="background.paper">DESIGN</Typography>
             </Box>
             <Box align="left" sx={{mt: 5}}>
-              <Typography variant="body1" letterSpacing={4.5} fontWeight={100} sx={{opacity: .7}} lineHeight={1.6} fontSize={23} color="background.default">TYPOGRAPHIES</Typography>
               <Typography variant="body1" letterSpacing={4.5} fontWeight={100} sx={{opacity: .7}} lineHeight={1.6} fontSize={23} color="background.default">DIGITAL ILLUSTRATIONS</Typography>
-              <Typography variant="body1" letterSpacing={4.5} fontWeight={100} sx={{opacity: .7}} lineHeight={1.6} fontSize={23} color="background.default">EXTERIOR VISUALIZATION</Typography>
+              <Typography variant="body1" letterSpacing={4.5} fontWeight={100} sx={{opacity: .7}} lineHeight={1.6} fontSize={23} color="background.default">TYPOGRAPHIES</Typography>
+              <Typography variant="body1" letterSpacing={4.5} fontWeight={100} sx={{opacity: .7}} lineHeight={1.6} fontSize={23} color="background.default">LOGO DESIGNS</Typography>
+              <Typography variant="body1" letterSpacing={4.5} fontWeight={100} sx={{opacity: .7}} lineHeight={1.6} fontSize={23} color="background.default">PRINT DESIGNS</Typography>
             </Box>
           </Grid>
           <Grid item xs={8} sx={{zIndex: 2}}>
