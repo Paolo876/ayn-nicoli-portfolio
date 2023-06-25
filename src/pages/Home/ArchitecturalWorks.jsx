@@ -31,7 +31,6 @@ const ArchitecturalWorks = ({ setShowModal }) => {
                   <ButtonBase 
                     disableRipple
                     onClick={() => handleClick("all")}
-                    
                     sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "left", }}
                   >
                     <Box sx={{ transition: "all 250ms ease 50ms", transform: activeProjects && activeProjects.id === "all" ? "scale(1.025)" : "scale(1)" }} align="left" >
