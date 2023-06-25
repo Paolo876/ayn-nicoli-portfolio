@@ -89,7 +89,7 @@ const Appbar = ({ isArchProjActive, setIsArchProjActive }) => {
           </Grid>
         </Grid>
         <Box sx={{position: "absolute", top: 0, left: "50%", transform: "translateX(-50%)", p:.25}}>
-          <Button component={NavLink} to="/" draggable={false} sx={{border:0, borderRadius: "50%", borderColor: "text.disabled", p:.3, minWidth: 0, minHeight: 0, overflow: "hidden" }} color="secondary">
+          <Button component={NavLink} to="/" draggable={false} sx={{borderRadius: "50%", p:.7, minWidth: 0, minHeight: 0, overflow: "hidden" }} color="primary">
             <Image src={logo} fit="cover" height={50} width={50}/>
           </Button>
         </Box>

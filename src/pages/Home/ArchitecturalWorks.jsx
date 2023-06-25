@@ -4,7 +4,7 @@ import { useAuthContext } from '../../hooks/useAuthContext';
 import Showcase from './Showcase.jsx';
 
 
-const ArchitecturalWorks = () => {
+const ArchitecturalWorks = ({ setShowModal }) => {
   const { architecturalProjects } = useAuthContext();
   const [ activeProjects, setActiveProjects ] = useState(null);
 
@@ -51,9 +51,9 @@ const ArchitecturalWorks = () => {
                 </Box>
               </Grid>
             </Slide>
-            <Fade appear={activeProjects} in={activeProjects} timeout={{ enter: 800, exit: 800 }} style={{ transitionDelay: "2000ms" }} unmountOnExit mountOnEnter>
+            <Fade appear={activeProjects} in={activeProjects} timeout={{ enter: 1200, exit: 800 }} style={{ transitionDelay: "2000ms" }} unmountOnExit mountOnEnter>
               <Grid item xs={8.8} sx={{zIndex: 2, display: "flex", flexDirection: "column", height: "100%", overflow: "auto", width: "100%"}}>
-                {activeProjects && <Showcase projects={activeProjects.projects}/>}
+                {activeProjects && <Showcase projects={activeProjects.projects} setShowModal={setShowModal}/>}
               </Grid>
             </Fade>
           </Grid>

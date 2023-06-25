@@ -11,7 +11,7 @@ const chunkArray = (arr, chunkSize) => {
  }, [])
 }
 
-const Showcase = ({ projects }) => {
+const Showcase = ({ projects, setShowModal }) => {
 
   return (
     <Box sx={{pt: 10, height: "100%", width: "100%", px: .5,}}>
@@ -23,7 +23,7 @@ const Showcase = ({ projects }) => {
       >
         <Grid container sx={{display: "flex", justifyContent:"center", alignItems: 'center'}} rowSpacing={9} columnSpacing={0} align="center" py={2} pb={8} mb={2}>
           {projects.map(item => <Grid item xs={4} key={item}>
-            <ButtonBase sx={{}}><Image src={item} width={330} height={300} fit="cover" duration={800}/></ButtonBase>
+            <ButtonBase onClick={() => setShowModal({isVisible: true, src: item})}><Image src={item} width={330} height={300} fit="cover" duration={1000}/></ButtonBase>
           </Grid>)}
         </Grid>
       </Carousel>
