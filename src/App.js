@@ -6,10 +6,9 @@ import DevNavbar from './components/Dev/DevNavbar';
 import Login from './pages/Login/Login';
 
 // pages
-import About from './pages/About/About';
+import About from './pages/About/About.jsx';
 import Contact from './pages/Contact/Contact';
 import Home from './pages/Home/Home';
-import Projects from './pages/Projects/Projects';
 import Landing from './pages/Home/Landing';
 import Appbar from './components/UI/Appbar';
 
@@ -26,28 +25,16 @@ function App() {
     <div>
       <BrowserRouter>
       <Landing showModal={showModal} setShowModal={setShowModal}/>
-
-        {/* <Appbar/> */}
-
         {user && authIsReady && <DevNavbar/>}
         <Routes>
           <Route path="/" element={!showModal && <Home/>} />
-          {/* <Route path="/contact" element={<Contact/>} />        
-          <Route path="/about" element={<About/>} />
-          <Route path="/projects/:id" element={<Projects/>} /> */}
+          <Route path="/about" element={!showModal && <About/>} />
+          <Route path="/contact" element={!showModal && <Contact/>} />  
 
           {/* dev */}
-          <Route path="/dev/login" element={
-            !user ? <Login/> : <Navigate to="/"/> 
-          }/>
-
-          <Route path="/dev/upload" element={ 
-            !user ? <Login/> : <Navigate to="/"/> 
-          }/>
-
-          <Route path="/dev/edit" element={
-            !user ? <Login/> : <Navigate to="/"/>
-          }/>
+          <Route path="/dev/login" element={ !user ? <Login/> : <Navigate to="/"/> }/>
+          <Route path="/dev/upload" element={ !user ? <Login/> : <Navigate to="/"/> }/>
+          <Route path="/dev/edit" element={ !user ? <Login/> : <Navigate to="/"/> }/>
         </Routes>
       </BrowserRouter>
     </div>
