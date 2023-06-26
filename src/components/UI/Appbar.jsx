@@ -7,7 +7,7 @@ import Image from 'mui-image';
 
 
 const linkStyles = {
-  fontSize: { sm: 12, md: 13, lg: 15 },
+  fontSize: { sm: 11, md: 12, lg: 14 },
   fontWeight: 500,
   letterSpacing: .25,
   borderBottom: "2px solid transparent",
@@ -88,9 +88,12 @@ const Appbar = ({ isArchProjActive, setIsArchProjActive }) => {
             <Link component={NavLink} to="/contact" draggable={false}><Typography color="primary.dark" sx={linkStyles}>CONTACT</Typography></Link>
           </Grid>
         </Grid>
-        <Box sx={{position: "absolute", top: 0, left: "50%", transform: "translateX(-50%)", p:.25}}>
+        <Box sx={{position: "absolute", top: 0, left: "50%", transform: "translateX(-50%)", p:{sm: 1, md: .5, lg: .25}}}>
           <Button component={NavLink} to="/" draggable={false} sx={{borderRadius: "50%", p:.7, minWidth: 0, minHeight: 0, overflow: "hidden" }} color="primary">
-            <Image src={logo} fit="cover" height={50} width={50}/>
+            <Box sx={{height: {xs: 38, sm: 40, md: 45, lg:50}, width: {xs: 38, sm: 40, md: 45, lg:50}}}>
+              <Image src={logo} fit="cover"/>
+
+            </Box>
           </Button>
         </Box>
       </Container>
