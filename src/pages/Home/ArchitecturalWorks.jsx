@@ -44,7 +44,7 @@ const ArchitecturalWorks = ({ setShowModal }) => {
                     <ButtonBase disableRipple onClick={() => handleClick("interior")} sx={{ml: .5}}>
                       <Typography 
                         align="left"
-                        fontSize={{sm: 10.5, md: 14, lg: 14, xl:18}}
+                        fontSize={{sm: 11, md: 14, lg: 14, xl:18}}
                         variant="body1" 
                         letterSpacing={{md: 2, lg:3}} 
                         sx={{
@@ -73,7 +73,7 @@ const ArchitecturalWorks = ({ setShowModal }) => {
                         }} 
                         lineHeight={2.1}
                         align="left"
-                        fontSize={{sm: 10.5, md: 14, lg: 14, xl:18}}
+                        fontSize={{sm: 11, md: 14, lg: 14, xl:18}}
                         color="background.default"
                       >
                         EXTERIOR VISUALIZATIONS
