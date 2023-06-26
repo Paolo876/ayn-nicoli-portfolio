@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import { useAuthContext } from './hooks/useAuthContext';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 // dev
 import DevNavbar from './components/Dev/DevNavbar';
 import Login from './pages/Login/Login';
@@ -17,9 +17,10 @@ function App() {
   const { user, authIsReady } = useAuthContext();
   const [ showModal, setShowModal ] = useState(true)
 
-  window.onload = () => {
+  useEffect(() => {
     setTimeout(() => setShowModal(false), 3000)
-  }
+  }, [])
+
 
   return (
     <div>
