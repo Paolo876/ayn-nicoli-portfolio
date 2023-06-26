@@ -37,7 +37,7 @@ export default function Home() {
       >
       <Fade in={showModal.isVisible} timeout={250}>
         <Box sx={style}>
-          {showModal && showModal.src && <Image src={showModal.src} fit="cover" duration={250} sx={{maxHeight: "90vh", maxWidth: "90vw",}}/>}
+          {showModal && showModal.src && <Image src={showModal.src} fit="cover" duration={250} sx={{maxHeight: "90vh", maxWidth: "90vw",}} showLoading={true}/>}
         </Box>
       </Fade>
 
