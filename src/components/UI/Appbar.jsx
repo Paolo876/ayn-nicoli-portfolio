@@ -7,9 +7,9 @@ import Image from 'mui-image';
 
 
 const linkStyles = {
-  fontSize: { md: 15, lg: 15, },
+  fontSize: { sm: 12, md: 13, lg: 15 },
   fontWeight: 500,
-  letterSpacing: .5,
+  letterSpacing: .25,
   borderBottom: "2px solid transparent",
   lineHeight: 1.8,
   opacity: .7,
@@ -23,7 +23,7 @@ const linkStyles = {
 const projectLinkStyles = {
   fontWeight: 700,
   lineHeight: 1.1,
-  fontSize: 17,
+  fontSize: {sm: 12.5, md: 13, lg: 14, xl:17},
   letterSpacing: -.5,
 
 }
@@ -42,10 +42,10 @@ const Appbar = ({ isArchProjActive, setIsArchProjActive }) => {
     <AppBar component="nav" position="fixed" sx={{minHeight: 0, backgroundColor: "background.default", boxShadow: 2}}>
       <Container maxWidth="xl" sx={{position: "relative"}}>
         <Grid container sx={{py:{xs:.5, sm:1.15, md: 1.2, lg: .75 }, minHeight: 65}}>
-          <Grid item xs={3.2} sx={{display: "flex", justifyContent: "space-between", alignItems: "center", px: .5}}>
+          <Grid item sm={4.5} md={4.3} lg={3.3} xl={3.2} sx={{display: "flex", justifyContent: "center", alignItems: "center", px: .5}}>
             <Button 
               onClick={() => setIsArchProjActive(true)}
-              sx={{...projectButtonStyles, transform: isArchProjActive ? "scale(1.05)" : "none", opacity: !isArchProjActive ? 1: .85}}
+              sx={{...projectButtonStyles, transform: isArchProjActive ? "scale(1.05)" : "none", opacity: !isArchProjActive ? 1: .85, minWidth: 0, px: {sm:0, md: 1}}}
             >
               <Typography 
                 color={isArchProjActive ? "primary.dark" : "primary.light"} 
@@ -57,7 +57,7 @@ const Appbar = ({ isArchProjActive, setIsArchProjActive }) => {
               {isArchProjActive && <Box sx={{height: 2, width: "75%", position: "absolute", bottom: 1, backgroundColor: "primary.light", transition: "all 500ms ease"}}></Box>}
             </Button>
 
-            <Box sx={{height: 6, width: 6, borderRadius: "50%", backgroundColor: "text.disabled"}}></Box>
+            <Box sx={{height: 6, width: 6, borderRadius: "50%", backgroundColor: "text.disabled", display: {sm: "none", md: "initial"}}}></Box>
 
             <Button 
               onClick={() => setIsArchProjActive(false)}
@@ -76,10 +76,10 @@ const Appbar = ({ isArchProjActive, setIsArchProjActive }) => {
           <Grid 
             item 
             sx={{
-              ml: { xs:0, md:"auto" }, 
-              display:{ xs: "none", md: "flex" }, 
+              ml: "auto", 
+              display: "flex", 
               flexDirection: "row", 
-              gap: { md:4, lg: 5,xl: 7.5 },
+              gap: { sm: 2, md:4, lg: 5,xl: 7.5 },
               alignItems: "center",
               justifyContent: "right"
             }}
