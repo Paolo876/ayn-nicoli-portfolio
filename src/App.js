@@ -7,10 +7,9 @@ import Login from './pages/Login/Login';
 
 // pages
 import About from './pages/About/About.jsx';
-import Contact from './pages/Contact/Contact';
+import Contact from './pages/Contact/Contact.jsx';
 import Home from './pages/Home/Home';
 import Landing from './pages/Home/Landing';
-import Appbar from './components/UI/Appbar';
 
 function App() {
   const { user, authIsReady } = useAuthContext();
