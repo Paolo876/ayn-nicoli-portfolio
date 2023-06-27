@@ -1,7 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
-import { Typography, AppBar, Container, Box, Link, Grid, Button, Fade } from '@mui/material';
-import { css, keyframes } from "@emotion/react";
+import { Typography, AppBar, Container, Box, Link, Grid, Button } from '@mui/material';
+import { keyframes } from "@emotion/react";
 
 import logo from "../../assets/logo/ayn-logo-100.png"
 import Image from 'mui-image';
@@ -21,7 +21,6 @@ const linkStyles = {
   letterSpacing: .25,
   borderBottom: "2px solid transparent",
   lineHeight: 1.8,
-  opacity: .7,
   transition: "all 300ms ease 200ms",
   animation: `${fadeIn} ease-in 800ms forwards`,
   "&:hover": {
@@ -96,9 +95,35 @@ const Appbar = ({ isArchProjActive, setIsArchProjActive }) => {
               justifyContent: "right"
             }}
           >
-            {pathname !== "/" && <Link component={NavLink} to="/" draggable={false}><Typography color="primary.dark" sx={linkStyles}>PROJECTS</Typography></Link>}
-            <Link component={NavLink} to="/about" draggable={false}><Typography color="primary.dark" sx={linkStyles}>ABOUT</Typography></Link>
-            <Link component={NavLink} to="/contact" draggable={false}><Typography color="primary.dark" sx={linkStyles}>CONTACT</Typography></Link>
+            {pathname !== "/" && <Link component={NavLink} to="/" draggable={false}><Typography color="primary.main" sx={linkStyles}>PROJECTS</Typography></Link>}
+            <Link component={NavLink} to="/about" draggable={false}>
+              <Typography 
+                color="primary.main" 
+                sx={{
+                  ...linkStyles, 
+                  borderColor: pathname === "/about" ? "primary.light" : "transparent",
+                  opacity: pathname === "/about" ? 1 : .7,
+                  fontWeight: pathname === "/about" ? 700 : 500,
+                  letterSpacing: pathname === "/about" ? .75 : .25,
+                }}
+              >
+                ABOUT
+              </Typography>
+            </Link>
+            <Link component={NavLink} to="/contact" draggable={false}>
+              <Typography 
+                color="primary.main" 
+                sx={{
+                  ...linkStyles, 
+                  borderColor: pathname === "/contact" ? "primary.light" : "transparent",
+                  opacity: pathname === "/contact" ? 1 : .7,
+                  fontWeight: pathname === "/contact" ? 700 : 500,
+                  letterSpacing: pathname === "/contact" ? .75 : .25,
+                }}
+              >
+                CONTACT
+              </Typography>
+            </Link>
           </Grid>
         </Grid>
         <Box sx={{position: "absolute", top: 0, left: "50%", transform: "translateX(-50%)", p:{sm: 1, md: .5, lg: .25}}}>
