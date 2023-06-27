@@ -1,7 +1,6 @@
-import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { NavLink, Link as ReactLink } from 'react-router-dom';
-import { Typography, AppBar, Container, Box, Link, IconButton, Grid, Button, ButtonBase } from '@mui/material'
+import { NavLink } from 'react-router-dom';
+import { Typography, AppBar, Container, Box, Link, Grid, Button } from '@mui/material'
 import logo from "../../assets/logo/ayn-logo-100.png"
 import Image from 'mui-image';
 
@@ -37,42 +36,45 @@ const projectButtonStyles = {
 }
 
 const Appbar = ({ isArchProjActive, setIsArchProjActive }) => {
-  
+  const { pathname } = useLocation();
+
   return (
     <AppBar component="nav" position="fixed" sx={{minHeight: 0, backgroundColor: "background.default", boxShadow: 2}}>
       <Container maxWidth="xl" sx={{position: "relative"}}>
         <Grid container sx={{py:{xs:.5, sm:1.15, md: 1.2, lg: .75 }, minHeight: 65}}>
-          <Grid item sm={4.5} md={4.3} lg={3.3} xl={3.2} sx={{display: "flex", justifyContent: "center", alignItems: "center", px: .5}}>
-            <Button 
-              onClick={() => setIsArchProjActive(true)}
-              sx={{...projectButtonStyles, transform: isArchProjActive ? "scale(1.05)" : "none", opacity: !isArchProjActive ? 1: .85, minWidth: 0, px: {sm:0, md: 1}}}
-            >
-              <Typography 
-                color={isArchProjActive ? "primary.dark" : "primary.light"} 
-                variant="h6" 
-                sx={projectLinkStyles}
+          {pathname === "/" &&
+            <Grid item sm={4.5} md={4.3} lg={3.3} xl={3.2} sx={{display: "flex", justifyContent: "center", alignItems: "center", px: .5}}>
+              <Button 
+                onClick={() => setIsArchProjActive(true)}
+                sx={{...projectButtonStyles, transform: isArchProjActive ? "scale(1.05)" : "none", opacity: !isArchProjActive ? 1: .85, minWidth: 0, px: {sm:0, md: 1}}}
               >
-                ARCHITECTURAL <Box component="span" fontWeight={400}>DESIGN</Box>
-              </Typography>
-              {isArchProjActive && <Box sx={{height: 2, width: "75%", position: "absolute", bottom: 1, backgroundColor: "primary.light", transition: "all 500ms ease"}}></Box>}
-            </Button>
+                <Typography 
+                  color={isArchProjActive ? "primary.dark" : "primary.light"} 
+                  variant="h6" 
+                  sx={projectLinkStyles}
+                >
+                  ARCHITECTURAL <Box component="span" fontWeight={400}>DESIGN</Box>
+                </Typography>
+                {isArchProjActive && <Box sx={{height: 2, width: "75%", position: "absolute", bottom: 1, backgroundColor: "primary.light", transition: "all 500ms ease"}}></Box>}
+              </Button>
 
-            <Box sx={{height: 6, width: 6, borderRadius: "50%", backgroundColor: "text.disabled", display: {sm: "none", md: "initial"}}}></Box>
+              <Box sx={{height: 6, width: 6, borderRadius: "50%", backgroundColor: "text.disabled", display: {sm: "none", md: "initial"}}}></Box>
 
-            <Button 
-              onClick={() => setIsArchProjActive(false)}
-              sx={{...projectButtonStyles, transform: !isArchProjActive ? "scale(1.05)" : "none", opacity: !isArchProjActive ? 1: .85}}
-            >
-              <Typography 
-                color={!isArchProjActive ? "secondary.dark" : "secondary.light"} 
-                variant="h6" 
-                sx={projectLinkStyles}
+              <Button 
+                onClick={() => setIsArchProjActive(false)}
+                sx={{...projectButtonStyles, transform: !isArchProjActive ? "scale(1.05)" : "none", opacity: !isArchProjActive ? 1: .85}}
               >
-                GRAPHIC <Box component="span" fontWeight={400}>DESIGN</Box>
-              </Typography>
-              {!isArchProjActive && <Box sx={{height: 2, width: "75%", position: "absolute", bottom: 1, backgroundColor: "secondary.light", transition: "all 500ms ease"}}></Box>}
-            </Button>  
-          </Grid>
+                <Typography 
+                  color={!isArchProjActive ? "secondary.dark" : "secondary.light"} 
+                  variant="h6" 
+                  sx={projectLinkStyles}
+                >
+                  GRAPHIC <Box component="span" fontWeight={400}>DESIGN</Box>
+                </Typography>
+                {!isArchProjActive && <Box sx={{height: 2, width: "75%", position: "absolute", bottom: 1, backgroundColor: "secondary.light", transition: "all 500ms ease"}}></Box>}
+              </Button>  
+            </Grid>
+          }
           <Grid 
             item 
             sx={{
@@ -84,6 +86,7 @@ const Appbar = ({ isArchProjActive, setIsArchProjActive }) => {
               justifyContent: "right"
             }}
           >
+            {pathname !== "/" && <Link component={NavLink} to="/" draggable={false}><Typography color="primary.dark" sx={linkStyles}>PROJECTS</Typography></Link>}
             <Link component={NavLink} to="/about" draggable={false}><Typography color="primary.dark" sx={linkStyles}>ABOUT</Typography></Link>
             <Link component={NavLink} to="/contact" draggable={false}><Typography color="primary.dark" sx={linkStyles}>CONTACT</Typography></Link>
           </Grid>
@@ -91,7 +94,7 @@ const Appbar = ({ isArchProjActive, setIsArchProjActive }) => {
         <Box sx={{position: "absolute", top: 0, left: "50%", transform: "translateX(-50%)", p:{sm: 1, md: .5, lg: .25}}}>
           <Button component={NavLink} to="/" draggable={false} sx={{borderRadius: "50%", p:.7, minWidth: 0, minHeight: 0, overflow: "hidden" }} color="primary">
             <Box sx={{height: {xs: 38, sm: 40, md: 45, lg:50}, width: {xs: 38, sm: 40, md: 45, lg:50}}}>
-              <Image src={logo} fit="cover"/>
+              <Image src={logo} fit="cover" duration={0}/>
 
             </Box>
           </Button>
