@@ -2,6 +2,8 @@ import React from 'react'
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import Appbar from '../../components/UI/Appbar';
 import InquiryForm from './InquiryForm';
+import EmailIcon from '@mui/icons-material/Email';
+
 
 const Contact = () => {
   return (
@@ -20,11 +22,15 @@ const Contact = () => {
                 target="_blank" 
                 variant="text" 
                 color="inherit"
+                size="large"
+                startIcon={<EmailIcon/>}
                 sx={{
                   textTransform: "none",
                   textDecoration: "underline",
-                  fontWeight: 400,
+                  fontWeight: 300,
                   lineHeight: 2,
+                  letterSpacing: .15,
+                  fontSize: 18,
                 }}
               >
                 aynslaquindanum@gmail.com
