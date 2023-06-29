@@ -8,7 +8,7 @@ const Contact = () => {
       <Appbar/>
       <Container maxWidth="xl" sx={{pt: 10}}>
         <Grid container>
-          <Grid xs={12} align="center"><Typography variant="h3">Let's Talk</Typography></Grid>
+          <Grid xs={12} align="center"><Typography variant="h3">Contact Me</Typography></Grid>
         </Grid>
       </Container>
     </Box>
