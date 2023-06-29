@@ -8,7 +8,7 @@ const InquiryForm = () => {
   }
   return (
     <Box component="form" onSubmit={handleSubmit}>
-      <Typography>For any inquiries</Typography>
+      
     </Box>
   )
 }

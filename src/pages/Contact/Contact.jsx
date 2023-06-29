@@ -14,7 +14,7 @@ const Contact = () => {
           {/* <Grid item xs={12} sx={{}}>
             <Typography variant="h1" fontSize={{lg: 60}}>Let's Work Together</Typography>
           </Grid> */}
-          <Grid item xs={8}>
+          <Grid item xs={6.5}>
             <Box>
               <Typography variant="h1" fontSize={{lg: 60}}>Let's Work Together</Typography>
             </Box>
@@ -43,7 +43,7 @@ const Contact = () => {
               </Button>
             </Box>
           </Grid>
-          <Grid item xs={4}><InquiryForm/></Grid>
+          <Grid item xs={5.5} sx={{backgroundColor: "secondary.main"}}><InquiryForm/></Grid>
         </Grid>
       </Container>
     </Box>
