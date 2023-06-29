@@ -7,8 +7,15 @@ const InquiryForm = () => {
     e.preventDefault();
   }
   return (
-    <Box component="form" onSubmit={handleSubmit}>
-      
+    <Box 
+      component="form" 
+      onSubmit={handleSubmit} 
+      sx={{
+        p: 5,
+
+      }}
+    >
+      <TextField label="Name" variant="standard" fullWidth/>
     </Box>
   )
 }
