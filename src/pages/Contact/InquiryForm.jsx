@@ -15,10 +15,10 @@ const InquiryForm = () => {
 
       }}
     >
-      <Typography variant="body1" lineHeight={1.2} fontWeight={300} fontSize={18}>
+      <Typography variant="body1" lineHeight={1.2} fontWeight={300} fontSize={18} mb={4}>
         For any questions or inquiries, you can reach me through my email or through submitting the form below.
       </Typography>
-      <Box>
+      <Box sx={{mb: 3}}>
         <Typography variant="h6">Name</Typography>
         <TextField 
           color="primary"
@@ -31,7 +31,7 @@ const InquiryForm = () => {
           fullWidth
         />
       </Box>
-      <Box>
+      <Box sx={{mb: 3}}>
         <Typography variant="h6">Email</Typography>
         <TextField 
           color="primary"
@@ -44,7 +44,7 @@ const InquiryForm = () => {
           fullWidth
         />
       </Box>
-      <Box>
+      <Box sx={{mb: 3}}>
         <Typography variant="h6">Phone <Box component="small">(optional)</Box></Typography>
         <TextField 
           color="primary"
@@ -57,7 +57,7 @@ const InquiryForm = () => {
           fullWidth
         />
       </Box>
-      <Box>
+      <Box sx={{mb: 3}}>
         <Typography variant="h6">Message</Typography>
         <TextField 
           color="primary"
@@ -76,7 +76,7 @@ const InquiryForm = () => {
           rows={6}
         />
       </Box>
-      <Box>
+      <Box sx={{display: "flex", justifyContent: "center", mt: 8}}>
         <Button type="submit" size="large" variant="contained">Submit</Button>
       </Box>
     </Box>
