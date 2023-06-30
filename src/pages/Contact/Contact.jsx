@@ -11,7 +11,7 @@ const Contact = () => {
       <Appbar/>
       <Container maxWidth="xl" sx={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center", pt: 5 }}>
         <Grid container sx={{ boxShadow: 20, backgroundColor: "primary.main", color: "background.default", height: "80vh"}}>
-          <Grid item xs={6.5}>
+          <Grid item xs={6.5} py={3} px={2}>
             <Box>
               <Typography variant="h1" fontSize={{lg: 60}}>Let's Work Together</Typography>
             </Box>

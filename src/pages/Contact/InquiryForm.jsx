@@ -11,15 +11,21 @@ const InquiryForm = () => {
       component="form" 
       onSubmit={handleSubmit} 
       sx={{
-        p: 5,
-
+        px: 4,
+        py: 3,
       }}
     >
-      <Typography variant="body1" lineHeight={1.2} fontWeight={300} fontSize={18} mb={4}>
-        For any questions or inquiries, you can reach me through my email or through submitting the form below.
-      </Typography>
-      <Box sx={{mb: 3}}>
-        <Typography variant="h6">Name</Typography>
+      <Box mb={5}>
+        <Typography variant="body1" lineHeight={1.25} fontWeight={200} fontSize={18}>
+          For inquiries, you can reach me through my email or through submitting the form below.
+        </Typography>
+        <Typography variant="body1" lineHeight={1.25} fontWeight={200} fontSize={16}>
+          I'm looking forward to hearing from you!
+        </Typography>
+      </Box>
+
+      <Box sx={{mb: 2.5}}>
+        <Typography variant="h6" fontWeight={300} letterSpacing={-.15}>Name</Typography>
         <TextField 
           color="primary"
           variant="outlined" 
@@ -31,8 +37,8 @@ const InquiryForm = () => {
           fullWidth
         />
       </Box>
-      <Box sx={{mb: 3}}>
-        <Typography variant="h6">Email</Typography>
+      <Box sx={{mb: 2.5}}>
+        <Typography variant="h6" fontWeight={300} letterSpacing={-.15}>Email</Typography>
         <TextField 
           color="primary"
           variant="outlined" 
@@ -44,8 +50,8 @@ const InquiryForm = () => {
           fullWidth
         />
       </Box>
-      <Box sx={{mb: 3}}>
-        <Typography variant="h6">Phone <Box component="small">(optional)</Box></Typography>
+      <Box sx={{mb: 2.5}}>
+        <Typography variant="h6" fontWeight={300} letterSpacing={-.15}>Phone <Box component="small">(optional)</Box></Typography>
         <TextField 
           color="primary"
           variant="outlined" 
@@ -57,8 +63,8 @@ const InquiryForm = () => {
           fullWidth
         />
       </Box>
-      <Box sx={{mb: 3}}>
-        <Typography variant="h6">Message</Typography>
+      <Box sx={{mb: 2.5}}>
+        <Typography variant="h6" fontWeight={300} letterSpacing={-.15}>Message</Typography>
         <TextField 
           color="primary"
           variant="outlined" 
@@ -77,7 +83,7 @@ const InquiryForm = () => {
         />
       </Box>
       <Box sx={{display: "flex", justifyContent: "center", mt: 8}}>
-        <Button type="submit" size="large" variant="contained">Submit</Button>
+        <Button type="submit" size="large" variant="contained" sx={{ letterSpacing: 1.5 }}>Submit</Button>
       </Box>
     </Box>
   )
