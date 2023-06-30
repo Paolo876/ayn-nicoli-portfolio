@@ -83,7 +83,7 @@ const InquiryForm = () => {
           sx={{p: 0, m: 0}}
           fullWidth
           multiline
-          rows={5}
+          rows={6}
         />
       </Box>
       <Box sx={{display: "flex", justifyContent: "center", mt: 8}}>
