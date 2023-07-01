@@ -12,10 +12,10 @@ const Contact = () => {
       <Box sx={{display: "flex", flexDirection:"column", alignItems: "space-between", height: "100vh"}}>
         <Appbar/>
         <Fade appear={true} in={true} timeout={{ enter: 1000, exit: 800 }} style={{ transitionDelay: "200ms" }}>
-          <Container maxWidth="xl" sx={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center", pt: 5 }}>
+          <Container maxWidth="xl" sx={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center", py: 0 }}>
             <Slide direction="down" in={true} mountOnEnter unmountOnExit timeout={800} >
-              <Grid container sx={{ boxShadow: 20, backgroundColor: "primary.main", color: "background.default", height: "80vh"}}>
-                <Grid item xs={7} py={3} px={2} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
+              <Grid container sx={{ boxShadow: 20, backgroundColor: "primary.main", color: "background.default", height: {lg:"80vh"}}}>
+                <Grid item md={12} lg={7} py={3} px={2} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
                   <Fade appear={true} in={true} timeout={{ enter: 800, exit: 800 }} style={{ transitionDelay: "700ms" }} mountOnEnter>
                     <Box>
                       <Typography variant="h1" lineHeight={1.2} letterSpacing={.5}>Let's Work Together</Typography>
@@ -55,7 +55,7 @@ const Contact = () => {
                   </Fade>
                 </Grid>
                 <Fade appear={true} in={true} timeout={{ enter: 800, exit: 800 }} style={{ transitionDelay: "1900ms" }} mountOnEnter>
-                  <Grid item xs={5} sx={{backgroundColor: "secondary.main"}}><InquiryForm/></Grid>
+                  <Grid item md={12} lg={5} sx={{backgroundColor: "secondary.main"}}><InquiryForm/></Grid>
                 </Fade>
               </Grid>
             </Slide>

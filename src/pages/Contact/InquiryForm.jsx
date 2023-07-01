@@ -25,8 +25,11 @@ const InquiryForm = () => {
       component="form" 
       onSubmit={handleSubmit} 
       sx={{
-        px: 4,
+        px: {xs: 3, sm: 6, md: 6, lg:4},
         py: 3,
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
       <Box mb={5}>
@@ -37,82 +40,92 @@ const InquiryForm = () => {
           For inquiries, you can reach me through my email or through submitting the form below.
         </Typography>
       </Box>
+      <Box 
+        sx={{        
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          // height: "100%",
+          // pb: 15,
+        }}
+      >
+        <Box sx={{mb: 2.5}}>
+          <Typography variant="h6" sx={labelStyles}>Name</Typography>
+          <TextField 
+            value={name}
+            onChange={e => setName(e.target.value)}
+            required
+            color="primary"
+            variant="outlined" 
+            size="small"
+            type="text"
+            inputProps={{
+              maxLength: 40,
+              sx: { backgroundColor: "background.default", overflow: "hidden", borderRadius: 1, opacity: .95, py: .75 }
+            }}
+            fullWidth
+          />
+        </Box>
+        <Box sx={{mb: 2.5}}>
+          <Typography variant="h6" sx={labelStyles}>Email</Typography>
+          <TextField 
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            required
+            color="primary"
+            variant="outlined" 
+            size="small"
+            type="text"
+            inputProps={{
+              maxLength: 50,
+              sx: { backgroundColor: "background.default", overflow: "hidden", borderRadius: 1, opacity: .95, py: .75 }
+            }}
+            fullWidth
+          />
+        </Box>
+        <Box sx={{mb: 2.5}}>
+          <Typography variant="h6" sx={labelStyles}>Phone <Box component="small" fontWeight={200} sx={{opacity: .85}}>(optional)</Box></Typography>
+          <TextField 
+            value={phone}
+            onChange={e => setPhone(e.target.value)}
+            color="primary"
+            variant="outlined" 
+            size="small"
+            type="text"
+            inputProps={{
+              maxLength: 20,
+              sx: { backgroundColor: "background.default", overflow: "hidden", borderRadius: 1, opacity: .95, py: .75 }
+            }}
+            fullWidth
+          />
+        </Box>
+        <Box sx={{mb: 2.5}}>
+          <Typography variant="h6" sx={labelStyles}>Message</Typography>
+          <TextField 
+            value={message}
+            onChange={e => setMessage(e.target.value)}
+            required
+            color="primary"
+            variant="outlined" 
+            size="small"
+            type="text"
+            inputProps={{
+              maxLength: 320,
+              sx: { overflow: "hidden", borderRadius: 1, p:0, m:0 }
+            }}
+            InputProps={{
+              sx: { backgroundColor: "background.default", opacity: .95, py: .75 }
+            }}
+            sx={{p: 0, m: 0}}
+            fullWidth
+            multiline
+            rows={6}
+          />
+        </Box>
+        <Box sx={{display: "flex", justifyContent: "center", mt: 8}}>
+          <Button type="submit" size="large" variant="contained" sx={{ letterSpacing: 1.5 }}>Submit</Button>
+        </Box>
 
-      <Box sx={{mb: 2.5}}>
-        <Typography variant="h6" sx={labelStyles}>Name</Typography>
-        <TextField 
-          value={name}
-          onChange={e => setName(e.target.value)}
-          required
-          color="primary"
-          variant="outlined" 
-          size="small"
-          type="text"
-          inputProps={{
-            maxLength: 40,
-            sx: { backgroundColor: "background.default", overflow: "hidden", borderRadius: 1, opacity: .95, py: .75 }
-          }}
-          fullWidth
-        />
-      </Box>
-      <Box sx={{mb: 2.5}}>
-        <Typography variant="h6" sx={labelStyles}>Email</Typography>
-        <TextField 
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-          required
-          color="primary"
-          variant="outlined" 
-          size="small"
-          type="text"
-          inputProps={{
-            maxLength: 50,
-            sx: { backgroundColor: "background.default", overflow: "hidden", borderRadius: 1, opacity: .95, py: .75 }
-          }}
-          fullWidth
-        />
-      </Box>
-      <Box sx={{mb: 2.5}}>
-        <Typography variant="h6" sx={labelStyles}>Phone <Box component="small" fontWeight={200} sx={{opacity: .85}}>(optional)</Box></Typography>
-        <TextField 
-          value={phone}
-          onChange={e => setPhone(e.target.value)}
-          color="primary"
-          variant="outlined" 
-          size="small"
-          type="text"
-          inputProps={{
-            maxLength: 20,
-            sx: { backgroundColor: "background.default", overflow: "hidden", borderRadius: 1, opacity: .95, py: .75 }
-          }}
-          fullWidth
-        />
-      </Box>
-      <Box sx={{mb: 2.5}}>
-        <Typography variant="h6" sx={labelStyles}>Message</Typography>
-        <TextField 
-          value={message}
-          onChange={e => setMessage(e.target.value)}
-          required
-          color="primary"
-          variant="outlined" 
-          size="small"
-          type="text"
-          inputProps={{
-            maxLength: 320,
-            sx: { overflow: "hidden", borderRadius: 1, p:0, m:0 }
-          }}
-          InputProps={{
-            sx: { backgroundColor: "background.default", opacity: .95, py: .75 }
-          }}
-          sx={{p: 0, m: 0}}
-          fullWidth
-          multiline
-          rows={6}
-        />
-      </Box>
-      <Box sx={{display: "flex", justifyContent: "center", mt: 8}}>
-        <Button type="submit" size="large" variant="contained" sx={{ letterSpacing: 1.5 }}>Submit</Button>
       </Box>
     </Box>
   )
