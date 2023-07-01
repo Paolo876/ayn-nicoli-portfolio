@@ -54,7 +54,9 @@ const Contact = () => {
                     </Box>
                   </Fade>
                 </Grid>
-                <Grid item xs={5} sx={{backgroundColor: "secondary.main"}}><InquiryForm/></Grid>
+                <Fade appear={true} in={true} timeout={{ enter: 800, exit: 800 }} style={{ transitionDelay: "1900ms" }} mountOnEnter>
+                  <Grid item xs={5} sx={{backgroundColor: "secondary.main"}}><InquiryForm/></Grid>
+                </Fade>
               </Grid>
             </Slide>
           </Container>

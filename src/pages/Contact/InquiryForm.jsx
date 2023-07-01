@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
-import { Typography, Box, TextField, FormControl, FormLabel, Button } from '@mui/material';
+import { Typography, Box, TextField, Button } from '@mui/material';
 
 const InquiryForm = () => {
   const [ name, setName ] = useState("");
   const [ email, setEmail ] = useState("");
   const [ phone, setPhone ] = useState("");
   const [ message, setMessage ] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
   }
+
+
   return (
     <Box 
       component="form" 
@@ -27,6 +30,8 @@ const InquiryForm = () => {
       <Box sx={{mb: 2.5}}>
         <Typography variant="h6" fontWeight={300} letterSpacing={-.15}>Name</Typography>
         <TextField 
+          value={name}
+          onChange={e => setName(e.target.value)}
           color="primary"
           variant="outlined" 
           size="small"
@@ -41,6 +46,8 @@ const InquiryForm = () => {
       <Box sx={{mb: 2.5}}>
         <Typography variant="h6" fontWeight={300} letterSpacing={-.15}>Email</Typography>
         <TextField 
+          value={email}
+          onChange={e => setEmail(e.target.value)}
           color="primary"
           variant="outlined" 
           size="small"
@@ -55,6 +62,8 @@ const InquiryForm = () => {
       <Box sx={{mb: 2.5}}>
         <Typography variant="h6" fontWeight={300} letterSpacing={-.15}>Phone <Box component="small">(optional)</Box></Typography>
         <TextField 
+          value={phone}
+          onChange={e => setPhone(e.target.value)}
           color="primary"
           variant="outlined" 
           size="small"
@@ -69,6 +78,8 @@ const InquiryForm = () => {
       <Box sx={{mb: 2.5}}>
         <Typography variant="h6" fontWeight={300} letterSpacing={-.15}>Message</Typography>
         <TextField 
+          value={message}
+          onChange={e => setMessage(e.target.value)}
           color="primary"
           variant="outlined" 
           size="small"
