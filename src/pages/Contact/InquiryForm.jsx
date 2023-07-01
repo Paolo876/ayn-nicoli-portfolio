@@ -1,6 +1,13 @@
 import React, { useState } from 'react'
 import { Typography, Box, TextField, Button } from '@mui/material';
 
+const labelStyles = {
+  fontWeight: 400,
+  letterSpacing: -.15, 
+  fontSize: 18
+}
+
+
 const InquiryForm = () => {
   const [ name, setName ] = useState("");
   const [ email, setEmail ] = useState("");
@@ -9,6 +16,7 @@ const InquiryForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(name, email, phone, message)
   }
 
 
@@ -22,45 +30,50 @@ const InquiryForm = () => {
       }}
     >
       <Box mb={5}>
-        <Typography variant="body1" lineHeight={1.25} fontWeight={200} fontSize={18}>
+        <Typography variant="body1" lineHeight={1.25} fontWeight={500} fontSize={21} mb={1}>
+          I'm looking forward to hearing from you!
+        </Typography>
+        <Typography variant="body1" lineHeight={1.25} fontWeight={300} fontSize={18}>
           For inquiries, you can reach me through my email or through submitting the form below.
         </Typography>
       </Box>
 
       <Box sx={{mb: 2.5}}>
-        <Typography variant="h6" fontWeight={300} letterSpacing={-.15}>Name</Typography>
+        <Typography variant="h6" sx={labelStyles}>Name</Typography>
         <TextField 
           value={name}
           onChange={e => setName(e.target.value)}
+          required
           color="primary"
           variant="outlined" 
           size="small"
           type="text"
           inputProps={{
             maxLength: 40,
-            sx: { backgroundColor: "background.default", overflow: "hidden", borderRadius: 1, opacity: .95 }
+            sx: { backgroundColor: "background.default", overflow: "hidden", borderRadius: 1, opacity: .95, py: .75 }
           }}
           fullWidth
         />
       </Box>
       <Box sx={{mb: 2.5}}>
-        <Typography variant="h6" fontWeight={300} letterSpacing={-.15}>Email</Typography>
+        <Typography variant="h6" sx={labelStyles}>Email</Typography>
         <TextField 
           value={email}
           onChange={e => setEmail(e.target.value)}
+          required
           color="primary"
           variant="outlined" 
           size="small"
           type="text"
           inputProps={{
             maxLength: 50,
-            sx: { backgroundColor: "background.default", overflow: "hidden", borderRadius: 1, opacity: .95 }
+            sx: { backgroundColor: "background.default", overflow: "hidden", borderRadius: 1, opacity: .95, py: .75 }
           }}
           fullWidth
         />
       </Box>
       <Box sx={{mb: 2.5}}>
-        <Typography variant="h6" fontWeight={300} letterSpacing={-.15}>Phone <Box component="small">(optional)</Box></Typography>
+        <Typography variant="h6" sx={labelStyles}>Phone <Box component="small" fontWeight={200} sx={{opacity: .85}}>(optional)</Box></Typography>
         <TextField 
           value={phone}
           onChange={e => setPhone(e.target.value)}
@@ -70,16 +83,17 @@ const InquiryForm = () => {
           type="text"
           inputProps={{
             maxLength: 20,
-            sx: { backgroundColor: "background.default", overflow: "hidden", borderRadius: 1, opacity: .95 }
+            sx: { backgroundColor: "background.default", overflow: "hidden", borderRadius: 1, opacity: .95, py: .75 }
           }}
           fullWidth
         />
       </Box>
       <Box sx={{mb: 2.5}}>
-        <Typography variant="h6" fontWeight={300} letterSpacing={-.15}>Message</Typography>
+        <Typography variant="h6" sx={labelStyles}>Message</Typography>
         <TextField 
           value={message}
           onChange={e => setMessage(e.target.value)}
+          required
           color="primary"
           variant="outlined" 
           size="small"
@@ -89,7 +103,7 @@ const InquiryForm = () => {
             sx: { overflow: "hidden", borderRadius: 1, p:0, m:0 }
           }}
           InputProps={{
-            sx: { backgroundColor: "background.default", opacity: .95, }
+            sx: { backgroundColor: "background.default", opacity: .95, py: .75 }
           }}
           sx={{p: 0, m: 0}}
           fullWidth
