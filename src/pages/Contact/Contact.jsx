@@ -32,8 +32,8 @@ const Contact = () => {
                       </Box>
                     </Box>
                   </Fade>
-                  {/* <Fade appear={true} in={true} timeout={{ enter: 800, exit: 800 }} style={{ transitionDelay: "1300ms" }} mountOnEnter>
-                    <Box ml={1}>
+                  <Fade appear={true} in={true} timeout={{ enter: 800, exit: 800 }} style={{ transitionDelay: "1300ms" }} mountOnEnter>
+                    <Box ml={{md:1}}>
                       <Button 
                         href="mailto:aynslaquindanum@gmail.com" 
                         target="_blank" 
@@ -46,13 +46,13 @@ const Contact = () => {
                           fontWeight: 300,
                           lineHeight: 2,
                           letterSpacing: .15,
-                          fontSize: 25,
+                          fontSize: { xs: 16, sm: 25 },
                         }}
                       >
                         aynslaquindanum@gmail.com
                       </Button>
                     </Box>
-                  </Fade> */}
+                  </Fade>
                 </Grid>
                 <Fade appear={true} in={true} timeout={{ enter: 800, exit: 800 }} style={{ transitionDelay: "1900ms" }} mountOnEnter>
                   <Grid item xs={12} lg={5} sx={{backgroundColor: "secondary.main"}}><InquiryForm/></Grid>

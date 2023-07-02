@@ -4,7 +4,7 @@ import { Typography, Box, TextField, Button } from '@mui/material';
 const labelStyles = {
   fontWeight: 400,
   letterSpacing: -.15, 
-  fontSize: 18
+  fontSize: {xs: 15, sm: 18}
 }
 
 
@@ -25,7 +25,7 @@ const InquiryForm = () => {
       component="form" 
       onSubmit={handleSubmit} 
       sx={{
-        px: {xs: 3, sm: 6, md: 6, lg:4},
+        px: {xs: 2, sm: 6, md: 6, lg:4},
         py: 3,
         height: "100%",
         display: "flex",
@@ -33,10 +33,10 @@ const InquiryForm = () => {
       }}
     >
       <Box mb={5}>
-        <Typography variant="body1" lineHeight={1.25} fontWeight={500} fontSize={21} mb={1}>
+        <Typography variant="body1" lineHeight={1.25} fontWeight={500} fontSize={{xs: 18, sm:21}} mb={1}>
           I'm looking forward to hearing from you!
         </Typography>
-        <Typography variant="body1" lineHeight={1.25} fontWeight={300} fontSize={18}>
+        <Typography variant="body1" lineHeight={1.25} fontWeight={300} fontSize={{ xs: 15, sm: 18 }}>
           For inquiries, you can reach me through my email or through submitting the form below.
         </Typography>
       </Box>
