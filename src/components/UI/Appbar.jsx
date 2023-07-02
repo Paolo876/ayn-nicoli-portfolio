@@ -16,7 +16,7 @@ const fadeIn = keyframes`
 
 
 const linkStyles = {
-  fontSize: { sm: 11, md: 12, lg: 14 },
+  fontSize: { xs: 12, sm: 12, md: 12, lg: 14 },
   fontWeight: 500,
   letterSpacing: .25,
   borderBottom: "2px solid transparent",
@@ -126,7 +126,7 @@ const Appbar = ({ isArchProjActive, setIsArchProjActive }) => {
             </Link>
           </Grid>
         </Grid>
-        <Box sx={{position: "absolute", top: 0, left: "50%", transform: "translateX(-50%)", p:{sm: 1, md: .5, lg: .25}}}>
+        <Box sx={{position: "absolute", top: 0, left: pathname === "/" ? "50%" : 50, transform: "translateX(-50%)", p:{sm: 1, md: .5, lg: .25}}}>
           <Button component={NavLink} to="/" draggable={false} sx={{borderRadius: "50%", p:.7, minWidth: 0, minHeight: 0, overflow: "hidden" }} color="primary">
             <Box sx={{height: {xs: 38, sm: 40, md: 45, lg:50}, width: {xs: 38, sm: 40, md: 45, lg:50}}}>
               <Image src={logo} fit="cover" duration={0}/>
