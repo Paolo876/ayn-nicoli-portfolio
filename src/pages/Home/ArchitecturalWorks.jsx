@@ -26,7 +26,7 @@ const ArchitecturalWorks = ({ setShowModal }) => {
         <Container maxWidth="xl" sx={{pt: 0, height: "100%"}}>
           <Grid container sx={{height: "100%"}}>
             <Slide direction="down" in={true} mountOnEnter unmountOnExit timeout={800} >
-              <Grid item sm={3.75} md={4} lg={3.2} sx={{zIndex: 2, backgroundColor: "primary.main", display: "flex", flexDirection: "column", px: {sm:1, md:2}, maxHeight: {sm: "60vh", md: "70vh", lg: "75vh"}, py: 30, boxShadow: 2}}>
+              <Grid item xs={12} sm={3.75} md={4} lg={3.2} sx={{zIndex: 2, backgroundColor: "primary.main", display: "flex", flexDirection: "column", px: {sm:1, md:2}, maxHeight: {sm: "60vh", md: "70vh", lg: "75vh"}, py: 30, boxShadow: 2}}>
                 <Fade appear={true} in={true} timeout={{ enter: 800, exit: 800 }} style={{ transitionDelay: "700ms" }} mountOnEnter>
                   <ButtonBase 
                     disableRipple
@@ -84,7 +84,7 @@ const ArchitecturalWorks = ({ setShowModal }) => {
               </Grid>
             </Slide>
             <Fade appear={activeProjects !== null} in={activeProjects !== null} timeout={{ enter: 1200, exit: 800 }} style={{ transitionDelay: "2000ms" }} unmountOnExit mountOnEnter>
-              <Grid item sm={8.25} md={8} lg={8.8} sx={{zIndex: 2, display: "flex", flexDirection: "column", height: "100%", overflow: "auto", width: "100%"}}>
+              <Grid item xs={12} sm={8.25} md={8} lg={8.8} sx={{zIndex: 2, display: "flex", flexDirection: "column", height: {md: "100%"}, overflow: "auto", width: "100%"}}>
                 {activeProjects && <Showcase projects={activeProjects.projects} setShowModal={setShowModal}/>}
               </Grid>
             </Fade>
