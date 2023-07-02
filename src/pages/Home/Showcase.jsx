@@ -20,10 +20,32 @@ const Showcase = ({ projects, setShowModal }) => {
         indicators={false}
         navButtonsAlwaysInvisible={true}
       >
-        <Grid container sx={{display: "flex", justifyContent:"center", alignItems: 'center'}} rowSpacing={{xs: 1, sm: 3, md: 6, lg:9}} columnSpacing={0} align="center" py={2} pb={8} mb={2} ml="auto">
+        <Grid container sx={{display: "flex", justifyContent:"center", alignItems: 'center'}} rowSpacing={{xs: 1, sm: 3, md: 6, lg:9}} columnSpacing={{xl:3}} align="center" py={2} pb={8} mb={2} ml="auto">
           {updatedProjects.map((item, index) => <Grid item sm={6} md={4} key={item}>
             <ButtonBase onClick={() => setShowModal({isVisible: true, src: projects[index]})}>
-              <Box sx={{width: {sm: 180, md: 185, lg: 270, xl: 330}, height: {sm: 175, md: 150, lg: 240, xl:300}}}>
+              <Box 
+                sx={{
+                  aspectRatio: "1 / 1",
+                  // height: "auto", 
+                  // width: "auto", 
+                  // maxHeight:300, 
+                  // maxWidth: 300, 
+                  // position: "relative", 
+                  // "&::after": {
+                  //   content: '""',
+                  //   display: "block",
+                  //   // paddingBottom: "100%",
+                  // },
+                  // "& img": {
+                  //  position: "absolute",
+                  //  width: "100%",
+                  //  height: "100%",
+                  //  objectFit: "cover",
+                  //  objectPosition: "50% 50%"
+                  // }
+                }}
+                >
+              {/* <Box sx={{width: {sm: 180, md: 185, lg: 270, xl: 330}, height: {sm: 175, md: 150, lg: 240, xl:300}}}> */}
                 <Image 
                   src={item} 
                   fit="cover" 
