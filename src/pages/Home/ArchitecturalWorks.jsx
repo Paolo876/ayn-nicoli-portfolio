@@ -26,7 +26,7 @@ const ArchitecturalWorks = ({ setShowModal }) => {
         <Container maxWidth="xl" sx={{pt: 0, height: "100%"}}>
           <Grid container sx={{height: "100%"}}>
             <Slide direction="down" in={true} mountOnEnter unmountOnExit timeout={800} >
-              <Grid item xs={12} sm={3.75} md={4} lg={3.2} sx={{zIndex: 2, backgroundColor: "primary.main", display: "flex", flexDirection: "column", px: {sm:1, md:2}, maxHeight: {sm: "60vh", md: "70vh", lg: "75vh"}, py: 30, boxShadow: 2}}>
+              <Grid item xs={12} sm={3.75} md={4} lg={3.2} sx={{zIndex: 2, backgroundColor: "primary.main", display: "flex", flexDirection: "column", px: {xs: 1, sm:1, md:2}, maxHeight: {xs: 300, sm: "60vh", md: "70vh", lg: "75vh"}, pt: {xs: 13, sm: 15, md: 30}, pb: {xs: 0, sm: 15, md: 30}, boxShadow: 2}}>
                 <Fade appear={true} in={true} timeout={{ enter: 800, exit: 800 }} style={{ transitionDelay: "700ms" }} mountOnEnter>
                   <ButtonBase 
                     disableRipple
@@ -34,12 +34,12 @@ const ArchitecturalWorks = ({ setShowModal }) => {
                     sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "left", }}
                   >
                     <Box sx={{ transition: "all 250ms ease 50ms", transform: activeProjects && activeProjects.id === "all" ? "scale(1.025)" : "scale(1)" }} align="left" >
-                      <Typography variant="h2" lineHeight={1.1} fontWeight={700} sx={{opacity: .95}} fontSize={{sm: 19, md: 29, lg: 32, xl: 42}} color="background.default" ml={{md:.25}}>ARCHITECTURAL</Typography>
-                      <Typography variant="h3" fontWeight={200} lineHeight={1.1} sx={{opacity: .8}} fontSize={{sm: 18, md: 29, lg: 32, xl: 42}} letterSpacing={1} color="background.paper">DESIGN</Typography>
+                      <Typography variant="h2" lineHeight={1.1} fontWeight={700} sx={{opacity: .95}} fontSize={{xs: 30, sm: 19, md: 29, lg: 32, xl: 42}} color="background.default" ml={{md:.25}}>ARCHITECTURAL</Typography>
+                      <Typography variant="h3" fontWeight={200} lineHeight={1.1} sx={{opacity: .8}} fontSize={{xs: 28, sm: 18, md: 29, lg: 32, xl: 42}} letterSpacing={1} color="background.paper">DESIGN</Typography>
                     </Box>
                   </ButtonBase>
                 </Fade>
-                <Box align="left" sx={{mt: 5, display: "flex", flexDirection: "column", textAlign:"left", alignItems: "flex-start"}}>
+                <Box align="left" sx={{mt: {xs: 2, sm: 5}, display: "flex", flexDirection: "column", textAlign:"left", alignItems: "flex-start"}}>
                   <Fade appear={true} in={true} timeout={{ enter: 800, exit: 800 }} style={{ transitionDelay: "1200ms" }}>
                     <ButtonBase disableRipple onClick={() => handleClick("interior")} sx={{ml: .5}}>
                       <Typography 
@@ -51,9 +51,9 @@ const ArchitecturalWorks = ({ setShowModal }) => {
                           transition: "all 250ms ease 25ms", 
                           fontWeight: activeProjects && activeProjects.id === "interior" ? 400 : 200,
                           opacity: activeProjects && activeProjects.id === "interior" ? .95 : .7, 
-                          transform: activeProjects && activeProjects.id === "interior" ? "scale(1.03)" : "scale(1)" 
+                          transform: activeProjects && activeProjects.id === "interior" ? "scale(1.03)" : "scale(1)" ,
+                          lineHeight: { xs: 1.6, sm: 2.1}
                         }} 
-                        lineHeight={2.1} 
                         color="background.default"
                       >
                         INTERIOR VISUALIZATIONS
@@ -69,9 +69,10 @@ const ArchitecturalWorks = ({ setShowModal }) => {
                           transition: "all 250ms ease 25ms", 
                           fontWeight: activeProjects && activeProjects.id === "exterior" ? 400 : 200,
                           opacity: activeProjects && activeProjects.id === "exterior" ? .95 : .7, 
-                          transform: activeProjects && activeProjects.id === "exterior" ? "scale(1.03)" : "scale(1)" 
+                          transform: activeProjects && activeProjects.id === "exterior" ? "scale(1.03)" : "scale(1)",
+                          lineHeight: { xs: 1.6, sm: 2.1}
+
                         }} 
-                        lineHeight={2.1}
                         align="left"
                         fontSize={{sm: 11, md: 14, lg: 14, xl:18}}
                         color="background.default"
