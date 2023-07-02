@@ -90,7 +90,7 @@ const Appbar = ({ isArchProjActive, setIsArchProjActive }) => {
               ml: "auto", 
               display: "flex", 
               flexDirection: "row", 
-              gap: { sm: 2, md:4, lg: 5,xl: 7.5 },
+              gap: { xs: 1, sm: 2, md:4, lg: 5,xl: 7.5 },
               alignItems: "center",
               justifyContent: "right"
             }}

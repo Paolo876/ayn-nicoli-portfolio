@@ -18,7 +18,7 @@ const Contact = () => {
                 <Grid item xs={12} lg={7} py={3} px={2} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
                   <Fade appear={true} in={true} timeout={{ enter: 800, exit: 800 }} style={{ transitionDelay: "700ms" }} mountOnEnter>
                     <Box sx={{mb: {xs: 10, sm: 10, md: 10, lg: 0}}}>
-                      <Typography variant="h1" lineHeight={1.1} letterSpacing={.5}>Let's Work Together</Typography>
+                      <Typography variant="h1" lineHeight={1.1} letterSpacing={.5} fontSize={{xs: 60, sm: 80, md: 105, lg: 105, xl:110}}>Let's Work Together</Typography>
                     </Box>
                   </Fade>
                   <Fade appear={true} in={true} timeout={{ enter: 800, exit: 800 }} style={{ transitionDelay: "1000ms" }} mountOnEnter>
