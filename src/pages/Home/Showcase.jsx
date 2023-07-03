@@ -23,7 +23,7 @@ const Showcase = ({ projects, setShowModal }) => {
                 <Image 
                   src={item} 
                   fit="cover" 
-                  duration={1000}
+                  duration={1100}
                 />
               </Box>
             </ButtonBase>
