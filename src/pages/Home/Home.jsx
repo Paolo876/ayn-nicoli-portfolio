@@ -10,10 +10,10 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  maxHeight: "90vh", 
-  maxWidth: "90vw",
+  // maxHeight: "90vh", 
+  // maxWidth: "90vw",
   border: 0,
-  boxShadow: 24,
+  boxShadow: 0,
 };
 
 
@@ -37,7 +37,11 @@ export default function Home() {
       >
       <Fade in={showModal.isVisible} timeout={250}>
         <Box sx={style}>
-          {showModal && showModal.src && <Image src={showModal.src} fit="cover" duration={250} sx={{maxHeight: "90vh", maxWidth: "90vw",}} showLoading={true}/>}
+          {showModal && showModal.src && 
+            <Box sx={{maxHeight: "90vh", maxWidth: "90vw", width: {xs: "90vw", md: "auto"}, height: "auto"}}>
+              <Image src={showModal.src} duration={250} showLoading={true} fit="cover"/>
+            </Box>
+          }
         </Box>
       </Fade>
 
