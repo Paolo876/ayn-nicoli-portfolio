@@ -26,17 +26,17 @@ const InquiryForm = () => {
       onSubmit={handleSubmit} 
       sx={{
         px: {xs: 2, sm: 6, md: 6, lg:4},
-        py: 3,
+        py: {xs: 2, sm:3},
         height: "100%",
         display: "flex",
         flexDirection: "column",
       }}
     >
-      <Box mb={5}>
-        <Typography variant="body1" lineHeight={1.25} fontWeight={500} fontSize={{xs: 18, sm:21}} mb={1}>
+      <Box mb={{xs: 3, sm: 5}}>
+        <Typography variant="body1" lineHeight={1.25} fontWeight={500} fontSize={{xs: 17, sm:21}} mb={1}>
           I'm looking forward to hearing from you!
         </Typography>
-        <Typography variant="body1" lineHeight={1.25} fontWeight={300} fontSize={{ xs: 15, sm: 18 }}>
+        <Typography variant="body1" lineHeight={1.25} fontWeight={300} fontSize={{ xs: 14, sm: 18 }}>
           For inquiries, you can reach me through my email or through submitting the form below.
         </Typography>
       </Box>
@@ -122,7 +122,7 @@ const InquiryForm = () => {
             rows={6}
           />
         </Box>
-        <Box sx={{display: "flex", justifyContent: "center", mt: 8}}>
+        <Box sx={{display: "flex", justifyContent: "center", mt: { xs: 5, sm: 6, md: 8 }}}>
           <Button type="submit" size="large" variant="contained" sx={{ letterSpacing: 1.5 }}>Submit</Button>
         </Box>
 

@@ -15,14 +15,14 @@ const Contact = () => {
           <Container maxWidth="xl" sx={{ height: {lg: "100%"}, display: "flex", alignItems: "center", justifyContent: "center", py: 10 }}>
             <Slide direction="down" in={true} mountOnEnter unmountOnExit timeout={800} >
               <Grid container sx={{ boxShadow: 20, backgroundColor: "primary.main", color: "background.default", height: {lg:"80vh"}}}>
-                <Grid item xs={12} lg={7} py={3} px={{xs: 1, sm:2}} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
+                <Grid item xs={12} lg={7} py={{xs: 2, sm:3}} px={{xs: 1, sm:2}} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
                   <Fade appear={true} in={true} timeout={{ enter: 800, exit: 800 }} style={{ transitionDelay: "700ms" }} mountOnEnter>
-                    <Box sx={{mb: {xs: 10, sm: 10, md: 10, lg: 0}}}>
+                    <Box sx={{mb: {xs: 6, sm: 10, md: 10, lg: 0}}}>
                       <Typography variant="h1" lineHeight={1.1} letterSpacing={.5} fontSize={{xs: 60, sm: 80, md: 105, lg: 105, xl:110}}>Let's Work Together</Typography>
                     </Box>
                   </Fade>
                   <Fade appear={true} in={true} timeout={{ enter: 800, exit: 800 }} style={{ transitionDelay: "1000ms" }} mountOnEnter>
-                    <Box sx={{ display: "flex", gap: {xs: 1.25, sm:3}, alignItems: "center", mb: {xs: 10, sm: 10, md: 10, lg: 0} }}>
+                    <Box sx={{ display: "flex", gap: {xs: 1.25, sm:3}, alignItems: "center", mb: {xs: 6, sm: 10, md: 10, lg: 0} }}>
                       <Box sx={{height: {xs: 50, sm:80}, width: "auto"}}>
                         <Image src={logo} fit="cover" duration={0}/>
                       </Box>
