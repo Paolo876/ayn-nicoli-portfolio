@@ -26,7 +26,7 @@ const ArchitecturalWorks = ({ setShowModal }) => {
         <Container maxWidth="xl" sx={{pt: 0, height: "100%"}}>
           <Grid container sx={{height: "100%"}}>
             <Slide direction="down" in={true} mountOnEnter unmountOnExit timeout={800} >
-              <Grid item xs={12} sm={3.75} md={4} lg={3.2} sx={{zIndex: 2, backgroundColor: "primary.main", display: "flex", flexDirection: "column", px: {xs: 1, sm:1, md:2}, maxHeight: {xs: "fit-content", sm: "60vh", md: "70vh", lg: "75vh"}, pt: {xs: 11, sm: 15, md: 30}, pb: {xs: 0, sm: 15, md: 30}, boxShadow: 2, height: {xs: 230, sm: "initial"}}}>
+              <Grid item xs={12} sm={3.75} md={4} lg={3.2} sx={{zIndex: 2, backgroundColor: "primary.main", display: "flex", flexDirection: "column", px: {xs: 1.5, sm:1, md:2}, maxHeight: {xs: "fit-content", sm: "60vh", md: "70vh", lg: "75vh"}, pt: {xs: 11, sm: 15, md: 30}, pb: {xs: 0, sm: 15, md: 30}, boxShadow: 2, height: {xs: 230, sm: "initial"}}}>
                 <Fade appear={true} in={true} timeout={{ enter: 800, exit: 800 }} style={{ transitionDelay: "700ms" }} mountOnEnter>
                   <ButtonBase 
                     disableRipple

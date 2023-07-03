@@ -32,7 +32,7 @@ const linkStyles = {
 const projectLinkStyles = {
   fontWeight: 700,
   lineHeight: 1.1,
-  fontSize: {xs: 14, sm: 12.5, md: 13, lg: 14, xl:17},
+  fontSize: {xs: 13, sm: 12.5, md: 13, lg: 14, xl:17},
   letterSpacing: -.5,
   animation: `${fadeIn} ease-in 800ms forwards`,
 
