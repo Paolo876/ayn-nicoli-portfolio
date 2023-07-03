@@ -52,7 +52,7 @@ const Appbar = ({ isArchProjActive, setIsArchProjActive }) => {
   return (
     <AppBar component="nav" position="fixed" sx={{minHeight: 0, backgroundColor: "background.default", boxShadow: 2}}>
       <Container maxWidth="xl" sx={{position: "relative"}}>
-        <Grid container sx={{py:{xs:.5, sm:1.15, md: 1.2, lg: .75 }, minHeight: pathname === "/" ? 65 : "initial"}}>
+        <Grid container sx={{py:{xs:.5, sm:1.15, md: 1.2, lg: .75 }, minHeight: pathname === "/" ? 65 : {xs: 45, sm: 55, md: 60, lg:65}}}>
           {pathname === "/" &&
             <Grid item xs={12} sm={4.5} md={4.3} lg={3.3} xl={3.2} sx={{display: "flex", justifyContent: "center", alignItems: "center", px: .5, pt: {xs: .5, sm: 0}, gap: {xs: 1, sm: 0}}} order={{xs: 2, sm: 1}}>
                 <Button 
@@ -128,9 +128,9 @@ const Appbar = ({ isArchProjActive, setIsArchProjActive }) => {
             </Link>
           </Grid>
         </Grid>
-        <Box sx={{position: "absolute", top: 0, left: pathname === "/" ? {xs: 35, sm:"50%"} : {xs: 35, sm: 50}, transform: "translateX(-50%)", p:{sm: 1, md: .5, lg: .25}}}>
+        <Box sx={{position: "absolute", top: 0, left: pathname === "/" ? {xs: 35, sm:"50%"} : {xs: 35, sm: 50}, transform: "translateX(-50%)"}}>
           <Button component={NavLink} to="/" draggable={false} sx={{borderRadius: "50%", p:.7, minWidth: 0, minHeight: 0, overflow: "hidden" }} color="primary">
-            <Box sx={{height: {xs: 30, sm: 40, md: 45, lg:50}, width: {xs: 30, sm: 40, md: 45, lg:50}}}>
+            <Box sx={{height: {xs: 30, sm: 40, md: 45, lg:50}, width: "auto"}}>
               <Image src={logo} fit="cover" duration={0}/>
             </Box>
           </Button>
