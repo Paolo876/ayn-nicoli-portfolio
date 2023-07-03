@@ -45,8 +45,6 @@ const InquiryForm = () => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          // height: "100%",
-          // pb: 15,
         }}
       >
         <Box sx={{mb: 2.5}}>

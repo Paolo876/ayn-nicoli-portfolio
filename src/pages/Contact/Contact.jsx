@@ -12,7 +12,7 @@ const Contact = () => {
       <Box sx={{display: "flex", flexDirection:"column", alignItems: "space-between", height: "100vh"}}>
         <Appbar/>
         <Fade appear={true} in={true} timeout={{ enter: 1000, exit: 800 }} style={{ transitionDelay: "200ms" }}>
-          <Container maxWidth="xl" sx={{ height: {lg: "100%"}, display: "flex", alignItems: "center", justifyContent: "center", py: 10 }}>
+          <Container maxWidth="xl" sx={{ height: {lg: "100%"}, display: "flex", alignItems: "center", justifyContent: "center", py: {xs: 7, sm: 10} }}>
             <Slide direction="down" in={true} mountOnEnter unmountOnExit timeout={800} >
               <Grid container sx={{ boxShadow: 20, backgroundColor: "primary.main", color: "background.default", height: {lg:"80vh"}}}>
                 <Grid item xs={12} lg={7} py={{xs: 2, sm:3}} px={{xs: 1, sm:2}} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
@@ -22,13 +22,13 @@ const Contact = () => {
                     </Box>
                   </Fade>
                   <Fade appear={true} in={true} timeout={{ enter: 800, exit: 800 }} style={{ transitionDelay: "1000ms" }} mountOnEnter>
-                    <Box sx={{ display: "flex", gap: {xs: 1.25, sm:3}, alignItems: "center", mb: {xs: 6, sm: 10, md: 10, lg: 0} }}>
-                      <Box sx={{height: {xs: 50, sm:80}, width: "auto"}}>
+                    <Box sx={{ display: "flex", gap: {xs: 1, sm:3}, alignItems: "center", mb: {xs: 6, sm: 10, md: 10, lg: 0} }}>
+                      <Box sx={{height: {xs: 42, sm:80}, width: "auto"}}>
                         <Image src={logo} fit="cover" duration={0}/>
                       </Box>
                       <Box>
-                        <Typography variant="h3" lineHeight={1.05} letterSpacing={{sm:.25}} fontSize={{xs: 31, sm: 40, md: 50}}>Ayn Laquindanum</Typography>
-                        <Typography letterSpacing={{xs: 0, sm:.5}} variant="body2" fontSize={{xs: 11.5, sm: 14}} sx={{opacity: .8}}>LICENSED ARCHITECT <Box component="span">|</Box> GRAPHIC DESIGNER</Typography>
+                        <Typography variant="h3" lineHeight={1.05} letterSpacing={{xs:.25}} fontSize={{xs: 29, sm: 40, md: 50}}>Ayn Laquindanum</Typography>
+                        <Typography letterSpacing={{xs: 0, sm:.5}} variant="body2" fontSize={{xs: 11, sm: 14}} sx={{opacity: .8}}>LICENSED ARCHITECT <Box component="span">|</Box> GRAPHIC DESIGNER</Typography>
                       </Box>
                     </Box>
                   </Fade>
