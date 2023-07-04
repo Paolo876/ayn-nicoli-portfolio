@@ -12,9 +12,9 @@ const Contact = () => {
       <Box sx={{display: "flex", flexDirection:"column", alignItems: "space-between", height: "100vh"}}>
         <Appbar/>
         <Fade appear={true} in={true} timeout={{ enter: 1000, exit: 800 }} style={{ transitionDelay: "200ms" }}>
-          <Container maxWidth="xl" sx={{ height: {lg: "100%"}, display: "flex", alignItems: "center", justifyContent: "center", py: {xs: 7, sm: 10} }}>
+          <Container maxWidth="xl" sx={{ height: {lg: "100%"}, display: "flex", alignItems: "center", justifyContent: "center", py: {xs: 7, sm: 10, lg: 12,} }}>
             <Slide direction="down" in={true} mountOnEnter unmountOnExit timeout={800} >
-              <Grid container sx={{ boxShadow: 20, backgroundColor: "primary.main", color: "background.default", height: {lg:"80vh"}}}>
+              <Grid container sx={{ boxShadow: 20, backgroundColor: "primary.main", color: "background.default", }}>
                 <Grid item xs={12} lg={7} py={{xs: 2, sm:3}} px={{xs: 1, sm:2}} sx={{display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
                   <Fade appear={true} in={true} timeout={{ enter: 800, exit: 800 }} style={{ transitionDelay: "700ms" }} mountOnEnter>
                     <Box sx={{mb: {xs: 6, sm: 10, md: 10, lg: 0}}}>
@@ -54,7 +54,7 @@ const Contact = () => {
                     </Box>
                   </Fade>
                 </Grid>
-                <Fade appear={true} in={true} timeout={{ enter: 600, exit: 600 }} style={{ transitionDelay: "1800ms" }} mountOnEnter>
+                <Fade appear={true} in={true} timeout={800} style={{ transitionDelay: "1800ms" }} mountOnEnter>
                   <Grid item xs={12} lg={5} sx={{backgroundColor: "secondary.main"}}><InquiryForm/></Grid>
                 </Fade>
               </Grid>
