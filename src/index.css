@@ -53,6 +53,7 @@ a:visited {
 
 ::-webkit-scrollbar
 {
+  display: none;
 	width: 4px;
 	background-color: #F5F5F5;
 }

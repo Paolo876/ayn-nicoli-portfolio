@@ -7,7 +7,7 @@ export default function Landing({ showModal }) {
 
   return (
     <Modal open={showModal} closeAfterTransition>
-      <Fade in={showModal} timeout={{ exit: 800}}>
+      <Fade in={showModal} timeout={{ exit: 600}}>
         <Box 
           sx={{
             height: "100vh",
@@ -21,18 +21,18 @@ export default function Landing({ showModal }) {
             pb: 15,
           }}
         >
-          <Fade appear={true} in={showModal} timeout={1200} style={{ transitionDelay: "250ms" }}>
+          <Fade appear={true} in={showModal} timeout={1000} style={{ transitionDelay: "200ms" }}>
             <Box mb={{xs: 1, sm:3}} sx={{height: {xs: 125, sm: 130, md: 140, lg: 150 }, width:"auto"}}>
               <Image src={logo} duration={0} fit="cover"/>
             </Box>
           </Fade>
 
           <Box sx={{display: "flex", alignItems: "center", mt: .75 }}>
-            <Fade appear={true} in={showModal} timeout={{ enter: 900, exit: 900 }} style={{ transitionDelay: "800ms" }}>
+            <Fade appear={true} in={showModal} timeout={{ enter: 900, exit: 900 }} style={{ transitionDelay: "700ms" }}>
               <Typography variant="body1" lineHeight={1} letterSpacing={.75} sx={{opacity: .75}} fontWeight={300} mt={.5} fontSize={{xs: 13, sm:16}}>LICENSED ARCHITECT</Typography>
             </Fade>
             <Typography variant="body1" color="primary.light" mx={{xs: .5, sm:1}} fontSize={16} lineHeight={1} fontWeight={400}>|</Typography>
-            <Fade appear={true} in={showModal} timeout={{ enter: 900, exit: 900 }} style={{ transitionDelay: "1200ms" }}>
+            <Fade appear={true} in={showModal} timeout={{ enter: 900, exit: 900 }} style={{ transitionDelay: "1000ms" }}>
               <Typography variant="body1" lineHeight={1} letterSpacing={.75} sx={{opacity: .75}} fontWeight={300} mt={.5} fontSize={{xs: 13, sm:16}}>GRAPHIC DESIGNER</Typography>
             </Fade>
           </Box>

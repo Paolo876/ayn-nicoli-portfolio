@@ -8,17 +8,17 @@ import Login from './admin/pages/Login';
 // pages
 import About from './pages/About/About.jsx';
 import Contact from './pages/Contact/Contact.jsx';
-import Home from './pages/Home/Home';
+import Home from './pages/Home/Home.jsx';
 import Landing from './pages/Home/Landing';
+import Post from './pages/Post/Post.jsx';
 
 function App() {
+  // const location = useLocation();
   const { user, authIsReady } = useAuthContext();
-  const [ showModal, setShowModal ] = useState(true)
-
+  const [ showModal, setShowModal ] = useState(window.location.pathname === "/")
   useEffect(() => {
     setTimeout(() => setShowModal(false), 3000)
   }, [])
-
 
   return (
     <div>
@@ -29,7 +29,7 @@ function App() {
           <Route path="/" element={!showModal && <Home/>} />
           <Route path="/about" element={!showModal && <About/>} />
           <Route path="/contact" element={!showModal && <Contact/>} />  
-
+          <Route path='/post/:id' element={ <Post/> }/>
           {/* dev */}
           <Route path="/dev/login" element={ !user ? <Login/> : <Navigate to="/"/> }/>
           {/* <Route path="/dev/upload" element={ !user ? <Login/> : <Navigate to="/"/> }/> */}
