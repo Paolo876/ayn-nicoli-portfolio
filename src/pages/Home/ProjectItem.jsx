@@ -36,7 +36,7 @@ const textProps={
 }
 
 
-const ProjectItem = ({ src }) => {
+const ProjectItem = ({ src, id="test" }) => {
 
   const navigate = useNavigate();
   const [ isHovered, setIsHovered ] = useState(false)
@@ -47,6 +47,7 @@ const ProjectItem = ({ src }) => {
       sx={containerProps}
       onMouseEnter={() => setIsHovered(true)} 
       onMouseLeave={() => setIsHovered(false)} 
+      onClick={() => navigate(`/post/${id}`)}
     >
       {isHovered && 
         <Fade in={true} timeout={{enter: 250}} style={{ transitionDelay: `120ms` }}>
